@@ -444,6 +444,7 @@ GameObject:
   - component: {fileID: 479469715}
   - component: {fileID: 479469717}
   - component: {fileID: 479469716}
+  - component: {fileID: 479469719}
   m_Layer: 5
   m_Name: Asteroid (1)
   m_TagString: Untagged
@@ -458,13 +459,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479469714}
-  m_LocalRotation: {x: -0, y: -0, z: 0.19719224, w: 0.98036486}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 352394294}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22.746}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 306, y: -21}
@@ -507,6 +508,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479469714}
   m_CullTransparentMesh: 0
+--- !u!95 &479469719
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479469714}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6eacc780d69e09a4ba5a7982f57725e7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &651206862
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,6 +771,7 @@ GameObject:
   - component: {fileID: 1685038233}
   - component: {fileID: 1685038235}
   - component: {fileID: 1685038234}
+  - component: {fileID: 1685038236}
   m_Layer: 5
   m_Name: Asteroid (2)
   m_TagString: Untagged
@@ -813,6 +834,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685038232}
   m_CullTransparentMesh: 0
+--- !u!95 &1685038236
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685038232}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d971eaa75e8abb84b91a2759426a75d2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1797170674
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,6 +864,7 @@ GameObject:
   - component: {fileID: 1797170675}
   - component: {fileID: 1797170677}
   - component: {fileID: 1797170676}
+  - component: {fileID: 1797170679}
   m_Layer: 5
   m_Name: Asteroid
   m_TagString: Untagged
@@ -887,6 +928,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797170674}
   m_CullTransparentMesh: 0
+--- !u!95 &1797170679
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797170674}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81988a2b2fbc00e498c363a90248a361, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &1852581563 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2838236483931133809, guid: 3d00399bc21f3214392c670e624df223,
@@ -938,7 +998,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.0000076293945}
+  m_AnchoredPosition: {x: 0, y: -40}
   m_SizeDelta: {x: 209.92, y: 230.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2020643540
@@ -1404,7 +1464,7 @@ PrefabInstance:
     - target: {fileID: 2003522557925221709, guid: b8f788cbc560adb40a5bbfd8a17cb977,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 2003522557925221709, guid: b8f788cbc560adb40a5bbfd8a17cb977,
         type: 3}
@@ -1528,7 +1588,7 @@ PrefabInstance:
     - target: {fileID: 1519984912442379854, guid: 290a99a95c9e9a241b63df4647ee9e69,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 1519984912442379854, guid: 290a99a95c9e9a241b63df4647ee9e69,
         type: 3}
@@ -1652,7 +1712,7 @@ PrefabInstance:
     - target: {fileID: 965590333303933447, guid: 4a85800787d825642b20e48381831817,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 965590333303933447, guid: 4a85800787d825642b20e48381831817,
         type: 3}
