@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\AsteroidDeadEffect.cs" />
      <Compile Include="Assets\Scripts\AsteroidDecay.cs" />
      <Compile Include="Assets\Scripts\AsteroidEuclideanTorus.cs" />
+     <Compile Include="Assets\Scripts\AsteroidExplosionAudio.cs" />
      <Compile Include="Assets\Scripts\AsteroidExplosionPool.cs" />
      <Compile Include="Assets\Scripts\AsteroidHitAudio.cs" />
      <Compile Include="Assets\Scripts\AsteroidHitExplosion.cs" />
@@ -79,12 +80,16 @@
      <Compile Include="Assets\Scripts\Missile.cs" />
      <Compile Include="Assets\Scripts\MissilePool.cs" />
      <Compile Include="Assets\Scripts\MoveController.cs" />
+     <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\Ship.cs" />
      <Compile Include="Assets\Scripts\ShipDeadEffect.cs" />
      <Compile Include="Assets\Scripts\ShipExplosionAudio.cs" />
+     <Compile Include="Assets\Scripts\ShipHealth.cs" />
+     <Compile Include="Assets\Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\UiCountdown.cs" />
      <Compile Include="Assets\Scripts\UiDamageCounter.cs" />
      <Compile Include="Assets\Scripts\UiGameOver.cs" />
+     <Compile Include="Assets\Scripts\UiHighscore.cs" />
      <Compile Include="Assets\Scripts\WeaponAudio.cs" />
      <Compile Include="Assets\Scripts\WeaponController.cs" />
  <Reference Include="Unity.TextMeshPro">

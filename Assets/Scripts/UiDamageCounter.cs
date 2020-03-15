@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 
 namespace Asteroid
@@ -6,16 +7,23 @@ namespace Asteroid
     public class UiDamageCounter : MonoBehaviour
     {
         private int _damage;
-        private TextMeshProUGUI _textMesh;
+
+        [SerializeField] private TextMeshProUGUI textMesh;
 
         private void Awake()
         {
-            _textMesh = GetComponentInChildren<TextMeshProUGUI>();
-            HealthAbility.OnDamage += damage =>
-            {
-                _damage += damage;
-                _textMesh.text = _damage.ToString("000000");
-            };
+            HealthAbility.OnDamage += UpdateDamageText;
+        }
+
+        private void UpdateDamageText(int damage)
+        {
+            _damage += damage;
+            textMesh.text = _damage.ToString("000000");
+        }
+
+        private void OnDestroy()
+        {
+            HealthAbility.OnDamage -= UpdateDamageText;
         }
     }
 }

@@ -4,25 +4,25 @@ using UnityEngine;
 namespace Asteroid
 {
     [RequireComponent(typeof(BoxCollider2D))]
-    [RequireComponent(typeof(HealthAbility))]
+    [RequireComponent(typeof(ShipHealth))]
     public class Ship : MonoBehaviour
     {
         private BoxCollider2D _collider;
-        private HealthAbility _healthAbility;
+        private ShipHealth _shipHealth;
         [SerializeField] private GameObject shipModel;
 
         private void Awake()
         {
             _collider = GetComponent<BoxCollider2D>();
 
-            _healthAbility = GetComponent<HealthAbility>();
-            _healthAbility.OnDied += Death;
+            _shipHealth = GetComponent<ShipHealth>();
+            _shipHealth.OnDied += Death;
 
             GameManager.OnGameStarts += ShowModel;
             GameManager.OnGameOver += HideModel;
         }
 
-        private void Death(HealthAbility unused)
+        private void Death()
         {
             GameManager.Instance.GameOver();
         }
@@ -43,7 +43,7 @@ namespace Asteroid
         {
             GameManager.OnGameStarts -= ShowModel;
             GameManager.OnGameOver -= HideModel;
-            _healthAbility.OnDied -= Death;
+            _shipHealth.OnDied -= Death;
         }
     }
 }

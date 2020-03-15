@@ -6,23 +6,23 @@ using UnityEngine.Assertions;
 namespace Asteroid
 {
     [RequireComponent(typeof(AudioSource))]
-    [RequireComponent(typeof(ShipHealth))]
-    public class ShipExplosionAudio : MonoBehaviour
+    [RequireComponent(typeof(HealthAbility))]
+    public class AsteroidExplosionAudio : MonoBehaviour
     {
         private AudioSource _audioSource;
-        private ShipHealth _shipHealth;
+        private HealthAbility _healthAbility;
         [SerializeField] private AudioClip audioClip;
 
         private void Awake()
         {
             _audioSource = GetComponent<AudioSource>();
             Assert.IsNotNull(_audioSource);
-            _shipHealth = GetComponent<ShipHealth>();
-            Assert.IsNotNull(_shipHealth);
-            _shipHealth.OnDied += Play;
+            _healthAbility = GetComponent<HealthAbility>();
+            Assert.IsNotNull(_healthAbility);
+            _healthAbility.OnDied += Play;
         }
 
-        private void Play()
+        private void Play(HealthAbility unused)
         {
             StartCoroutine(CoPlay());
         }
@@ -35,7 +35,7 @@ namespace Asteroid
 
         private void OnDestroy()
         {
-            _shipHealth.OnDied -= Play;
+            _healthAbility.OnDied -= Play;
         }
     }
 }

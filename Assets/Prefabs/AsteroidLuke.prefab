@@ -100,8 +100,8 @@ GameObject:
   - component: {fileID: 651775723}
   - component: {fileID: 1816582733688461127}
   - component: {fileID: 814013043634070763}
-  - component: {fileID: 7406242693268850539}
   - component: {fileID: 8962429613165713510}
+  - component: {fileID: 3592613422812247179}
   m_Layer: 0
   m_Name: AsteroidLuke
   m_TagString: Asteroid
@@ -331,19 +331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f504fc6430ee4c0287395af16da73f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7406242693268850539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4464639257485725131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37033ea69417428791a61c638e2502ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 67c06f581243b4f41887a03c6eae453b, type: 3}
 --- !u!114 &8962429613165713510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,6 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56edcf773c434292ab6705f08de22c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  model: {fileID: 3772872904649851443}
   sprites:
   - {fileID: 9097014453191235531, guid: 9b76cfedaf1990d4a85f924fcef02cba, type: 3}
   - {fileID: 5267365428097030844, guid: 9b76cfedaf1990d4a85f924fcef02cba, type: 3}
@@ -363,4 +351,16 @@ MonoBehaviour:
   - {fileID: -7402301571462492641, guid: 9b76cfedaf1990d4a85f924fcef02cba, type: 3}
   - {fileID: 9073312271601827497, guid: 9b76cfedaf1990d4a85f924fcef02cba, type: 3}
   - {fileID: -8707792303924701058, guid: 9b76cfedaf1990d4a85f924fcef02cba, type: 3}
-  model: {fileID: 3772872904649851443}
+--- !u!114 &3592613422812247179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4464639257485725131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38acb022a7424a51a0698e911ddcf6d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 67c06f581243b4f41887a03c6eae453b, type: 3}

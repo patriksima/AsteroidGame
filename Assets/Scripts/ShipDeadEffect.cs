@@ -6,15 +6,15 @@ namespace Asteroid
 {
     public class ShipDeadEffect : MonoBehaviour
     {
-        private HealthAbility _healthAbility;
+        private ShipHealth _shipHealth;
 
         private void Awake()
         {
-            _healthAbility = GetComponent<HealthAbility>();
-            _healthAbility.OnDied += Play;
+            _shipHealth = GetComponent<ShipHealth>();
+            _shipHealth.OnDied += Play;
         }
 
-        private void Play(HealthAbility unused)
+        private void Play()
         {
             StartCoroutine(CoPlay());
         }
@@ -39,7 +39,7 @@ namespace Asteroid
 
         private void OnDestroy()
         {
-            _healthAbility.OnDied -= Play;
+            _shipHealth.OnDied -= Play;
         }
     }
 }

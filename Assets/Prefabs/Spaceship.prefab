@@ -4771,10 +4771,10 @@ GameObject:
   - component: {fileID: 660209940978818343}
   - component: {fileID: 3064654740138025574}
   - component: {fileID: 4946436184849927881}
-  - component: {fileID: 1500188347944058802}
-  - component: {fileID: 5212751766980555164}
+  - component: {fileID: 8730941112014802990}
   - component: {fileID: 7279615933599411931}
   - component: {fileID: 4689683553482257242}
+  - component: {fileID: 9124223425096660165}
   m_Layer: 0
   m_Name: Spaceship
   m_TagString: Player
@@ -5003,7 +5003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad8f5086ac47259d37a05d9f741a11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1500188347944058802
+--- !u!114 &8730941112014802990
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5012,20 +5012,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 660209940978818346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37033ea69417428791a61c638e2502ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 24ccbf4c2d1172c4a8319ce43fc2911a, type: 3}
---- !u!114 &5212751766980555164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660209940978818346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c2a678447dd454fafb68704df9c884e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f84d053652042d7aa498124b8bbc281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   initialHealth: 1
@@ -5054,6 +5041,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipModel: {fileID: 660209941297649158}
+--- !u!114 &9124223425096660165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660209940978818346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37033ea69417428791a61c638e2502ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 24ccbf4c2d1172c4a8319ce43fc2911a, type: 3}
 --- !u!1 &660209941297649158
 GameObject:
   m_ObjectHideFlags: 0
