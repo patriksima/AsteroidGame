@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\AsteroidPool.cs" />
      <Compile Include="Assets\Scripts\AsteroidSpawner.cs" />
      <Compile Include="Assets\Scripts\BoundsController.cs" />
+     <Compile Include="Assets\Scripts\ButtonHoverSound.cs" />
      <Compile Include="Assets\Scripts\Cosmos.cs" />
      <Compile Include="Assets\Scripts\FlameController.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -80,6 +81,7 @@
      <Compile Include="Assets\Scripts\Missile.cs" />
      <Compile Include="Assets\Scripts\MissilePool.cs" />
      <Compile Include="Assets\Scripts\MoveController.cs" />
+     <Compile Include="Assets\Scripts\SceneManager.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\Ship.cs" />
      <Compile Include="Assets\Scripts\ShipDeadEffect.cs" />
@@ -87,6 +89,7 @@
      <Compile Include="Assets\Scripts\ShipHealth.cs" />
      <Compile Include="Assets\Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\UiCountdown.cs" />
+     <Compile Include="Assets\Scripts\UiCredits.cs" />
      <Compile Include="Assets\Scripts\UiDamageCounter.cs" />
      <Compile Include="Assets\Scripts\UiGameOver.cs" />
      <Compile Include="Assets\Scripts\UiHighscore.cs" />

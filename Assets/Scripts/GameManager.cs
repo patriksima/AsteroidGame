@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -26,7 +27,7 @@ namespace Asteroid
         {
             if (Input.GetKey("escape"))
             {
-                Application.Quit();
+                Quit();
             }
 
             if (Input.GetKeyDown("space"))
@@ -41,9 +42,15 @@ namespace Asteroid
             }
         }
 
+        public void Quit()
+        {
+            Application.Quit();
+        }
+
         private void ReloadGame()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene()
+                .name);
         }
 
         public void GameStarts()
@@ -54,6 +61,13 @@ namespace Asteroid
         public void GameOver()
         {
             OnGameOver?.Invoke();
+            StartCoroutine(LoadMenu());
+        }
+
+        private IEnumerator LoadMenu()
+        {
+            yield return new WaitForSeconds(3f);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenuScene");
         }
     }
 }
