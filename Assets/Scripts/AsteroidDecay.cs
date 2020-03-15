@@ -1,21 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Asteroid
 {
-    [RequireComponent(typeof(SpriteRenderer))]
     [RequireComponent(typeof(HealthAbility))]
     public class AsteroidDecay : MonoBehaviour
     {
-        [SerializeField] private List<Sprite> sprites;
-        private SpriteRenderer _spriteRenderer;
-        private HealthAbility _healthAbility;
         private int _currentStage;
+        private HealthAbility _healthAbility;
+
+        private SpriteRenderer _spriteRenderer;
+        [SerializeField] private GameObject model;
+        [SerializeField] private List<Sprite> sprites;
 
         private void Awake()
         {
-            _spriteRenderer = GetComponent<SpriteRenderer>();
+            _spriteRenderer = model.GetComponent<SpriteRenderer>();
             _healthAbility = GetComponent<HealthAbility>();
         }
 
@@ -27,7 +27,7 @@ namespace Asteroid
             }
 
             var stageSize = (float) _healthAbility.InitialHealth / sprites.Count;
-            var newStage = (int) (sprites.Count - (_healthAbility.CurrentHealth / stageSize));
+            var newStage = (int) (sprites.Count - _healthAbility.CurrentHealth / stageSize);
 
             if (_currentStage == newStage)
             {

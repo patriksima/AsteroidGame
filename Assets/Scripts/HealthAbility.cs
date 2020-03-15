@@ -11,13 +11,6 @@ namespace Asteroid
 
         public int InitialHealth => initialHealth;
 
-        public event Action<HealthAbility> OnDied;
-
-        private void Awake()
-        {
-            CurrentHealth = initialHealth;
-        }
-
         public void TakeDamage(int damage)
         {
             CurrentHealth -= damage;
@@ -26,6 +19,19 @@ namespace Asteroid
             {
                 OnDied?.Invoke(this);
             }
+            else
+            {
+                OnDamage?.Invoke(damage);
+            }
+        }
+
+        public event Action<HealthAbility> OnDied;
+
+        public static event Action<int> OnDamage;
+
+        private void Awake()
+        {
+            CurrentHealth = initialHealth;
         }
     }
 }

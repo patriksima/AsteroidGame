@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Asteroid
 {
@@ -7,20 +6,31 @@ namespace Asteroid
     [RequireComponent(typeof(HealthAbility))]
     public class Ship : MonoBehaviour
     {
-        [SerializeField] private GameObject shipModel;
-        private HealthAbility _healthAbility;
         private BoxCollider2D _collider;
+        private HealthAbility _healthAbility;
+        [SerializeField] private GameObject shipModel;
 
         private void Awake()
         {
             _collider = GetComponent<BoxCollider2D>();
+
             _healthAbility = GetComponent<HealthAbility>();
-            _healthAbility.OnDied += ability =>
-            {
-                _collider.enabled = false;
-                shipModel.gameObject.SetActive(false);
-                GetComponent<WeaponController>().enabled = false;
-            };
+            _healthAbility.OnDied += ability => { GameManager.Instance.GameOver(); };
+
+            GameManager.OnGameStarts += ShowModel;
+            GameManager.OnGameOver += HideModel;
+        }
+
+        private void ShowModel()
+        {
+            _collider.enabled = true;
+            shipModel.SetActive(true);
+        }
+
+        private void HideModel()
+        {
+            _collider.enabled = false;
+            shipModel.SetActive(false);
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 namespace Asteroid
@@ -20,12 +19,16 @@ namespace Asteroid
 
         private IEnumerator CoPlay()
         {
+            gameObject.SetActive(true);
+
             foreach (var particle in _particles)
             {
                 particle.Play();
             }
 
             yield return new WaitForSeconds(.1f);
+
+            gameObject.SetActive(false);
             AsteroidHitExplosionPool.Instance.Put(this);
         }
     }

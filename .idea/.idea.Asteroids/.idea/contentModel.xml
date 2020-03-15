@@ -30,6 +30,9 @@
           <e p="Ship.cs" t="Include" />
           <e p="ShipDeadEffect.cs" t="Include" />
           <e p="ShipExplosionAudio.cs" t="Include" />
+          <e p="UiCountdown.cs" t="Include" />
+          <e p="UIDamageCounter.cs" t="Include" />
+          <e p="UiGameOver.cs" t="Include" />
           <e p="WeaponAudio.cs" t="Include" />
           <e p="WeaponController.cs" t="Include" />
         </e>

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Assertions;
 
 namespace Asteroid
@@ -30,7 +27,7 @@ namespace Asteroid
             // very simple eucledian thorus
             if (!_screenBounds.Contains(transform.position))
             {
-               // Debug.Log($"I am off now at {transform.position}");
+                // Debug.Log($"I am off now at {transform.position}");
 
                 if (transform.position.x < _screenBounds.xMin)
                 {

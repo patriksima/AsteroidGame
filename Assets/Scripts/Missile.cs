@@ -9,6 +9,11 @@ namespace Asteroid
 
         private float _lifeTimer;
 
+        private void Awake()
+        {
+            gameObject.SetActive(true);
+        }
+
         private void Update()
         {
             if (_lifeTimer > Lifetime)
@@ -23,6 +28,7 @@ namespace Asteroid
         private void ReturnToPool()
         {
             _lifeTimer = 0f;
+            gameObject.SetActive(false);
             MissilePool.Instance.Put(this);
         }
 

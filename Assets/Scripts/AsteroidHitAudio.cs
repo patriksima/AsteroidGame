@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace Asteroid
 {
@@ -12,9 +13,10 @@ namespace Asteroid
             _audioSource = GetComponent<AudioSource>();
         }
 
-        private void Play()
+        private IEnumerator CoPlay()
         {
             _audioSource.PlayOneShot(_audioSource.clip);
+            yield return new WaitForSeconds(_audioSource.clip.length);
         }
 
         private void OnCollisionEnter2D(Collision2D other)
@@ -24,7 +26,7 @@ namespace Asteroid
                 return;
             }
 
-            Play();
+            StartCoroutine(CoPlay());
         }
     }
 }

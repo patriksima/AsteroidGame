@@ -26,6 +26,8 @@ namespace Asteroid
 
             // wait until particle effect finish and return to pool
             yield return new WaitForSeconds(main.duration + main.startLifetime.constantMax);
+
+            explosion.gameObject.SetActive(false);
             AsteroidExplosionPool.Instance.Put(explosion);
         }
     }

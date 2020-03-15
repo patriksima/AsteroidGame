@@ -10,8 +10,8 @@ namespace Asteroid
             {
                 return;
             }
-            
-            foreach (ContactPoint2D missileHit in other.contacts)
+
+            foreach (var missileHit in other.contacts)
             {
                 var hitPoint = missileHit.point;
                 var explosion = AsteroidHitExplosionPool.Instance.Get();

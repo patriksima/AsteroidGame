@@ -1,36 +1,37 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Asteroid
 {
     [RequireComponent(typeof(WeaponAudio))]
     public class WeaponController : MonoBehaviour
     {
-        [SerializeField] private Transform weaponLeft;
-        [SerializeField] private Transform weaponRight;
-
-        private WeaponAudio _weaponAudio;
-
         private const float FireRate = .3f;
         private float _fireTimer;
+
+        private WeaponAudio _weaponAudio;
+        [SerializeField] private Transform weaponLeft;
+        [SerializeField] private Transform weaponRight;
 
         private void Awake()
         {
             _weaponAudio = GetComponent<WeaponAudio>();
+
+            GameManager.OnGameStarts += () => enabled = true;
+            GameManager.OnGameOver += () => enabled = false;
         }
 
         private void Update()
         {
             _fireTimer += Time.deltaTime;
 
-            if (Input.GetButton("Fire1") && _fireTimer > FireRate)
+            if (!Input.GetButton("Fire1") || _fireTimer < FireRate)
             {
-                _fireTimer = 0f;
-                Fire();
-                Play();
+                return;
             }
+
+            _fireTimer = 0f;
+            Fire();
+            Play();
         }
 
         private void Play()

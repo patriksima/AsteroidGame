@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Asteroid
 {
     public abstract class GenericPool<T> : MonoBehaviour where T : Component
     {
+        private readonly Queue<T> _components = new Queue<T>();
         [SerializeField] private T prefab;
 
         public static GenericPool<T> Instance { get; private set; }
-
-        private readonly Queue<T> _components = new Queue<T>();
 
         private void Awake()
         {
@@ -29,7 +27,6 @@ namespace Asteroid
 
         public void Put(T component)
         {
-            component.gameObject.SetActive(false);
             _components.Enqueue(component);
         }
 
@@ -38,7 +35,6 @@ namespace Asteroid
             for (var i = 0; i < count; i++)
             {
                 var component = Instantiate(prefab);
-                component.gameObject.SetActive(false);
                 _components.Enqueue(component);
             }
         }

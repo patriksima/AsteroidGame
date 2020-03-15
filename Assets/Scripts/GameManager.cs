@@ -6,7 +6,16 @@ namespace Asteroid
 {
     public class GameManager : MonoBehaviour
     {
-        private bool _paused = false;
+        public static GameManager Instance { get; private set; }
+        public static event Action OnGameStarts;
+        public static event Action OnGameOver;
+
+        private bool _paused;
+
+        private void Awake()
+        {
+            Instance = this;
+        }
 
         private void Start()
         {
@@ -23,21 +32,28 @@ namespace Asteroid
             if (Input.GetKeyDown("space"))
             {
                 _paused = !_paused;
-                if (_paused)
-                {
-                    Time.timeScale = 0f;
-                }
-                else
-                {
-                    Time.timeScale = 1f;
-                }
+                Time.timeScale = _paused ? 0f : 1f;
             }
 
             if (Input.GetKeyDown("return"))
             {
-                Debug.Log("Reload");
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                ReloadGame();
             }
+        }
+
+        private void ReloadGame()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        public void GameStarts()
+        {
+            OnGameStarts?.Invoke();
+        }
+
+        public void GameOver()
+        {
+            OnGameOver?.Invoke();
         }
     }
 }

@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 namespace Asteroid
 {
     public class ShipExplosionAudio : MonoBehaviour
     {
-        [SerializeField] private AudioClip audioClip;
         private AudioSource _audioSource;
         private HealthAbility _healthAbility;
+        [SerializeField] private AudioClip audioClip;
 
         private void Awake()
         {

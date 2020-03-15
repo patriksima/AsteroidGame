@@ -82,8 +82,14 @@
      <Compile Include="Assets\Scripts\Ship.cs" />
      <Compile Include="Assets\Scripts\ShipDeadEffect.cs" />
      <Compile Include="Assets\Scripts\ShipExplosionAudio.cs" />
+     <Compile Include="Assets\Scripts\UiCountdown.cs" />
+     <Compile Include="Assets\Scripts\UiDamageCounter.cs" />
+     <Compile Include="Assets\Scripts\UiGameOver.cs" />
      <Compile Include="Assets\Scripts\WeaponAudio.cs" />
      <Compile Include="Assets\Scripts\WeaponController.cs" />
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>D:/Projects/Asteroids/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/Projects/Asteroids/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>

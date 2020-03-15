@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = System.Random;
 
 namespace Asteroid
@@ -12,29 +9,32 @@ namespace Asteroid
     {
         private HealthAbility _healthAbility;
         private Rigidbody2D _rigidbody;
+        [SerializeField] private GameObject model;
 
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
             _healthAbility = GetComponent<HealthAbility>();
-            _healthAbility.OnDied += ability => { StartCoroutine(WaitForDeath()); };
-        }
+            model.gameObject.SetActive(true);
+            GetComponent<CapsuleCollider2D>().enabled = true;
 
-        private IEnumerator WaitForDeath()
-        {
-            yield return new WaitForSeconds(.1f);
-            ReturnToPool();
+            _healthAbility.OnDied += ability =>
+            {
+                model.gameObject.SetActive(false);
+                GetComponent<CapsuleCollider2D>().enabled = false;
+                ReturnToPool();
+            };
         }
 
         private void Start()
         {
-            Random r = new Random();
+            var r = new Random();
 
             var x = (float) r.NextDouble() + .5f;
             var y = (float) r.NextDouble() + .5f;
             var f = (float) r.NextDouble() * 30f + 60f;
-            var d1 = (r.Next(0, 2) == 1) ? -1f : 1f;
-            var d2 = (r.Next(0, 2) == 1) ? -1f : 1f;
+            var d1 = r.Next(0, 2) == 1 ? -1f : 1f;
+            var d2 = r.Next(0, 2) == 1 ? -1f : 1f;
 
             var velocity = new Vector2(x * d1, y * d2);
 

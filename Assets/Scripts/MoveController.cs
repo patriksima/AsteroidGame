@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Asteroid
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public class MoveController : MonoBehaviour
     {
-        public static bool IsMoving { get; private set; }
-
         private const float RotationSpeed = 150.0f;
         private const float ThrustForce = 1f;
 
         private Rigidbody2D _rigidbody;
+        public static bool IsMoving { get; private set; }
 
         private void Awake()
         {
