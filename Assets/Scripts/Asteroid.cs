@@ -8,10 +8,12 @@ namespace Asteroid
     [RequireComponent(typeof(HealthAbility))]
     public class Asteroid : MonoBehaviour
     {
+        private CapsuleCollider2D _collider;
         private HealthAbility _healthAbility;
         private Rigidbody2D _rigidbody;
-        private CapsuleCollider2D _collider;
         [SerializeField] private GameObject model;
+
+        public static event Action OnDestroyed;
 
         private void Awake()
         {
@@ -46,6 +48,7 @@ namespace Asteroid
             model.gameObject.SetActive(false);
             _collider.enabled = false;
             ReturnToPool();
+            OnDestroyed?.Invoke();
         }
 
         private void ReturnToPool()

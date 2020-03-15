@@ -26,6 +26,7 @@
           <e p="GenericPool.cs" t="Include" />
           <e p="HealthAbility.cs" t="Include" />
           <e p="ITakeDamage.cs" t="Include" />
+          <e p="LevelManager.cs" t="Include" />
           <e p="Missile.cs" t="Include" />
           <e p="MissilePool.cs" t="Include" />
           <e p="MoveController.cs" t="Include" />
@@ -40,6 +41,7 @@
           <e p="UiCredits.cs" t="Include" />
           <e p="UIDamageCounter.cs" t="Include" />
           <e p="UiGameOver.cs" t="Include" />
+          <e p="UiGameWin.cs" t="Include" />
           <e p="UiHighscore.cs" t="Include" />
           <e p="WeaponAudio.cs" t="Include" />
           <e p="WeaponController.cs" t="Include" />

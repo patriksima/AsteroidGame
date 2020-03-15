@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Asteroid
 {
@@ -19,6 +18,7 @@ namespace Asteroid
 
             GameManager.OnGameStarts += WeaponsOn;
             GameManager.OnGameOver += WeaponsOff;
+            GameManager.OnGameWin += WeaponsOff;
         }
 
         private void Update()
@@ -71,6 +71,7 @@ namespace Asteroid
         {
             GameManager.OnGameStarts -= WeaponsOn;
             GameManager.OnGameOver -= WeaponsOff;
+            GameManager.OnGameWin -= WeaponsOff;
         }
     }
 }

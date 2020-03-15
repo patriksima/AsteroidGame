@@ -1,12 +1,11 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Asteroid
 {
     public class ScoreManager : Singleton<ScoreManager>
     {
-        public int Highscore { get; private set; }
         private int _currentScore;
+        public int Highscore { get; private set; }
 
         private void Awake()
         {

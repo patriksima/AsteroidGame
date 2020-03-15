@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -8,11 +7,10 @@ namespace Asteroid
     [RequireComponent(typeof(AudioSource))]
     public class UiCountdown : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI textMesh;
-
         private AudioSource _audioSource;
 
         private int _countdownTime = 3;
+        [SerializeField] private TextMeshProUGUI textMesh;
 
         private void Awake()
         {

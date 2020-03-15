@@ -2,13 +2,13 @@
 
 namespace Asteroid
 {
-    public class UiGameOver : MonoBehaviour
+    public class UiGameWin : MonoBehaviour
     {
         [SerializeField] private GameObject panel;
 
         private void Awake()
         {
-            GameManager.OnGameOver += Show;
+            GameManager.OnGameWin += Show;
         }
 
         private void Show()
@@ -18,7 +18,7 @@ namespace Asteroid
 
         private void OnDestroy()
         {
-            GameManager.OnGameOver -= Show;
+            GameManager.OnGameWin -= Show;
         }
     }
 }

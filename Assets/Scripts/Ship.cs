@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Asteroid
 {
@@ -20,6 +19,7 @@ namespace Asteroid
 
             GameManager.OnGameStarts += ShowModel;
             GameManager.OnGameOver += HideModel;
+            GameManager.OnGameWin += HideModel;
         }
 
         private void Death()
@@ -43,6 +43,7 @@ namespace Asteroid
         {
             GameManager.OnGameStarts -= ShowModel;
             GameManager.OnGameOver -= HideModel;
+            GameManager.OnGameWin -= HideModel;
             _shipHealth.OnDied -= Death;
         }
     }

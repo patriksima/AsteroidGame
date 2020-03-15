@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Asteroid
 {
     public class GameManager : MonoBehaviour
     {
+        private bool _paused;
         public static GameManager Instance { get; private set; }
         public static event Action OnGameStarts;
         public static event Action OnGameOver;
-
-        private bool _paused;
+        public static event Action OnGameWin;
 
         private void Awake()
         {
@@ -64,9 +63,15 @@ namespace Asteroid
             StartCoroutine(LoadMenu());
         }
 
+        public void GameWin()
+        {
+            OnGameWin?.Invoke();
+            StartCoroutine(LoadMenu());
+        }
+
         private IEnumerator LoadMenu()
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitUntil(() => Input.GetKeyDown("space"));
             UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenuScene");
         }
     }

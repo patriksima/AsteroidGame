@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Assertions;
-using Random = UnityEngine.Random;
 
 namespace Asteroid
 {
@@ -11,7 +9,6 @@ namespace Asteroid
         private Camera _camera;
         private Vector3 _screenBottomLeft;
         private Vector3 _screenTopRight;
-        [SerializeField] private int count = 5;
 
         private void Awake()
         {
@@ -20,16 +17,14 @@ namespace Asteroid
 
             _screenTopRight = _camera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
             _screenBottomLeft = _camera.ScreenToWorldPoint(Vector3.zero);
-
-            GameManager.OnGameStarts += Spawn;
         }
 
-        private void Spawn()
+        public void Spawn(int count)
         {
-            StartCoroutine(CoSpawn());
+            StartCoroutine(CoSpawn(count));
         }
 
-        private IEnumerator CoSpawn()
+        private IEnumerator CoSpawn(int count)
         {
             for (var i = 0; i < count; i++)
             {
@@ -41,11 +36,6 @@ namespace Asteroid
 
                 yield return new WaitForSeconds(Random.value * 3f);
             }
-        }
-
-        private void OnDestroy()
-        {
-            GameManager.OnGameStarts -= Spawn;
         }
     }
 }
