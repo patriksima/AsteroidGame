@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Assertions;
+using Random = UnityEngine.Random;
 
 namespace Asteroid
 {
@@ -19,22 +21,31 @@ namespace Asteroid
             _screenTopRight = _camera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
             _screenBottomLeft = _camera.ScreenToWorldPoint(Vector3.zero);
 
-            GameManager.OnGameStarts += () => { StartCoroutine(Spawn()); };
+            GameManager.OnGameStarts += Spawn;
         }
 
-        private IEnumerator Spawn()
+        private void Spawn()
+        {
+            StartCoroutine(CoSpawn());
+        }
+
+        private IEnumerator CoSpawn()
         {
             for (var i = 0; i < count; i++)
             {
                 var asteroid = AsteroidPool.Instance.Get();
                 asteroid.transform.position = new Vector3(_screenTopRight.x, _screenTopRight.y, 0f);
-                //asteroid.transform.position = new Vector3(Random.Range(_screenBottomLeft.x - 2f, _screenTopRight.x + 2f),
-                // _screenTopRight.y + 2f, 0f);
+
                 var scale = .5f + Random.value * 1.2f;
                 asteroid.transform.localScale = new Vector3(scale, scale, 0f);
-                //asteroid.gameObject.SetActive(true);
+
                 yield return new WaitForSeconds(Random.value * 3f);
             }
+        }
+
+        private void OnDestroy()
+        {
+            GameManager.OnGameStarts -= Spawn;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Asteroid
 {
@@ -31,6 +32,12 @@ namespace Asteroid
         {
             _collider.enabled = false;
             shipModel.SetActive(false);
+        }
+
+        private void OnDestroy()
+        {
+            GameManager.OnGameStarts -= ShowModel;
+            GameManager.OnGameOver -= HideModel;
         }
     }
 }

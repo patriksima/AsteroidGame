@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Asteroid
 {
@@ -16,8 +17,8 @@ namespace Asteroid
         {
             _weaponAudio = GetComponent<WeaponAudio>();
 
-            GameManager.OnGameStarts += () => enabled = true;
-            GameManager.OnGameOver += () => enabled = false;
+            GameManager.OnGameStarts += WeaponsOn;
+            GameManager.OnGameOver += WeaponsOff;
         }
 
         private void Update()
@@ -54,6 +55,22 @@ namespace Asteroid
             missileTransform2.rotation = weaponRight.rotation;
             missileTransform2.position = weaponRight.position;
             missile2.gameObject.SetActive(true);
+        }
+
+        private void WeaponsOn()
+        {
+            enabled = true;
+        }
+
+        private void WeaponsOff()
+        {
+            enabled = false;
+        }
+
+        private void OnDestroy()
+        {
+            GameManager.OnGameStarts -= WeaponsOn;
+            GameManager.OnGameOver -= WeaponsOff;
         }
     }
 }
