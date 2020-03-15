@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Asteroid
@@ -10,10 +11,15 @@ namespace Asteroid
         private void Awake()
         {
             _healthAbility = GetComponent<HealthAbility>();
-            _healthAbility.OnDied += ability => { StartCoroutine(Play()); };
+            _healthAbility.OnDied += Play;
         }
 
-        private IEnumerator Play()
+        private void Play(HealthAbility unused)
+        {
+            StartCoroutine(CoPlay());
+        }
+
+        private IEnumerator CoPlay()
         {
             var explosion = AsteroidExplosionPool.Instance.Get();
             var main = explosion.main;
@@ -29,6 +35,11 @@ namespace Asteroid
 
             explosion.gameObject.SetActive(false);
             AsteroidExplosionPool.Instance.Put(explosion);
+        }
+
+        private void OnDestroy()
+        {
+            _healthAbility.OnDied -= Play;
         }
     }
 }

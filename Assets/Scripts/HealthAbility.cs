@@ -15,13 +15,11 @@ namespace Asteroid
         {
             CurrentHealth -= damage;
 
+            OnDamage?.Invoke(damage);
+            
             if (CurrentHealth <= 0)
             {
                 OnDied?.Invoke(this);
-            }
-            else
-            {
-                OnDamage?.Invoke(damage);
             }
         }
 

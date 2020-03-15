@@ -16,10 +16,15 @@ namespace Asteroid
             _collider = GetComponent<BoxCollider2D>();
 
             _healthAbility = GetComponent<HealthAbility>();
-            _healthAbility.OnDied += ability => { GameManager.Instance.GameOver(); };
+            _healthAbility.OnDied += Death;
 
             GameManager.OnGameStarts += ShowModel;
             GameManager.OnGameOver += HideModel;
+        }
+
+        private void Death(HealthAbility unused)
+        {
+            GameManager.Instance.GameOver();
         }
 
         private void ShowModel()
@@ -38,6 +43,7 @@ namespace Asteroid
         {
             GameManager.OnGameStarts -= ShowModel;
             GameManager.OnGameOver -= HideModel;
+            _healthAbility.OnDied -= Death;
         }
     }
 }

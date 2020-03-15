@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using Random = System.Random;
 
 namespace Asteroid
@@ -9,21 +10,19 @@ namespace Asteroid
     {
         private HealthAbility _healthAbility;
         private Rigidbody2D _rigidbody;
+        private CapsuleCollider2D _collider;
         [SerializeField] private GameObject model;
 
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
             _healthAbility = GetComponent<HealthAbility>();
-            model.gameObject.SetActive(true);
-            GetComponent<CapsuleCollider2D>().enabled = true;
+            _collider = GetComponent<CapsuleCollider2D>();
 
-            _healthAbility.OnDied += ability =>
-            {
-                model.gameObject.SetActive(false);
-                GetComponent<CapsuleCollider2D>().enabled = false;
-                ReturnToPool();
-            };
+            model.gameObject.SetActive(true);
+            _collider.enabled = true;
+
+            _healthAbility.OnDied += Death;
         }
 
         private void Start()
@@ -42,6 +41,12 @@ namespace Asteroid
             _rigidbody.angularVelocity = 1f + (float) r.NextDouble() * 100f * d1;
         }
 
+        private void Death(HealthAbility unused)
+        {
+            model.gameObject.SetActive(false);
+            _collider.enabled = false;
+            ReturnToPool();
+        }
 
         private void ReturnToPool()
         {
@@ -50,11 +55,18 @@ namespace Asteroid
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("Player"))
+            if (!other.CompareTag("Player"))
             {
-                var damageable = other.GetComponent<ITakeDamage>();
-                damageable?.TakeDamage(1);
+                return;
             }
+
+            var damageable = other.GetComponent<ITakeDamage>();
+            damageable?.TakeDamage(1);
+        }
+
+        private void OnDestroy()
+        {
+            _healthAbility.OnDied -= Death;
         }
     }
 }

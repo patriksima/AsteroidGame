@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Asteroid
@@ -13,13 +14,23 @@ namespace Asteroid
         {
             _audioSource = GetComponent<AudioSource>();
             _healthAbility = GetComponent<HealthAbility>();
-            _healthAbility.OnDied += ability => { StartCoroutine(CoPlay()); };
+            _healthAbility.OnDied += Play;
+        }
+
+        private void Play(HealthAbility unused)
+        {
+            StartCoroutine(CoPlay());
         }
 
         private IEnumerator CoPlay()
         {
             _audioSource.PlayOneShot(audioClip);
             yield return new WaitForSeconds(audioClip.length);
+        }
+
+        private void OnDestroy()
+        {
+            _healthAbility.OnDied -= Play;
         }
     }
 }
