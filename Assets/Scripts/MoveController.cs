@@ -5,8 +5,8 @@ namespace Asteroid
     [RequireComponent(typeof(Rigidbody2D))]
     public class MoveController : MonoBehaviour
     {
-        private const float RotationSpeed = 150.0f;
-        private const float ThrustForce = 1f;
+        private const float RotationSpeed = 90.0f;
+        private const float ThrustForce = .9f;
 
         private Rigidbody2D _rigidbody;
         public static bool IsMoving { get; private set; }

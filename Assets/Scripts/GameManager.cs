@@ -28,7 +28,7 @@ namespace Asteroid
             {
                 Quit();
             }
-
+/*
             if (Input.GetKeyDown("space"))
             {
                 _paused = !_paused;
@@ -39,6 +39,7 @@ namespace Asteroid
             {
                 ReloadGame();
             }
+*/
         }
 
         public void Quit()

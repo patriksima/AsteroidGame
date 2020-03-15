@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Asteroid
 {
-    public class AsteroidHitExplosion : MonoBehaviour
+    public class AsteroidHitExplosion : PoolItem
     {
         private ParticleSystem[] _particles;
 
@@ -19,8 +19,6 @@ namespace Asteroid
 
         private IEnumerator CoPlay()
         {
-            gameObject.SetActive(true);
-
             foreach (var particle in _particles)
             {
                 particle.Play();
@@ -28,7 +26,6 @@ namespace Asteroid
 
             yield return new WaitForSeconds(.1f);
 
-            gameObject.SetActive(false);
             AsteroidHitExplosionPool.Instance.Put(this);
         }
     }

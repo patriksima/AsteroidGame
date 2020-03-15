@@ -3,8 +3,9 @@ using UnityEngine;
 
 namespace Asteroid
 {
-    public abstract class GenericPool<T> : MonoBehaviour where T : Component
+    public abstract class GenericPool<T> : MonoBehaviour where T : PoolItem
     {
+        protected int InitialCount;
         private readonly Queue<T> _components = new Queue<T>();
         [SerializeField] private T prefab;
 
@@ -13,20 +14,30 @@ namespace Asteroid
         private void Awake()
         {
             Instance = this;
+            Setup();
+        }
+
+        protected virtual void Setup()
+        {
+            InitialCount = 100;
         }
 
         public T Get()
         {
             if (_components.Count == 0)
             {
-                AddComponent(1);
+                AddComponent(InitialCount);
             }
 
-            return _components.Dequeue();
+            var component = _components.Dequeue();
+            component.OnPoolOut();
+
+            return component;
         }
 
         public void Put(T component)
         {
+            component.OnPoolIn();
             _components.Enqueue(component);
         }
 
@@ -34,8 +45,7 @@ namespace Asteroid
         {
             for (var i = 0; i < count; i++)
             {
-                var component = Instantiate(prefab);
-                _components.Enqueue(component);
+                Put(Instantiate(prefab));
             }
         }
     }

@@ -11,6 +11,11 @@ namespace Asteroid
 
         public int InitialHealth => initialHealth;
 
+        public void ResetHealth()
+        {
+            CurrentHealth = initialHealth;
+        }
+
         public void TakeDamage(int damage)
         {
             CurrentHealth -= damage;
@@ -29,7 +34,7 @@ namespace Asteroid
 
         private void Awake()
         {
-            CurrentHealth = initialHealth;
+            ResetHealth();
         }
     }
 }

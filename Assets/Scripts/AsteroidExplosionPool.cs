@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 
 namespace Asteroid
 {
-    public class AsteroidExplosionPool : GenericPool<ParticleSystem>
+
+    public class AsteroidExplosionPool : GenericPool<AsteroidExplosion>
     {
     }
 }

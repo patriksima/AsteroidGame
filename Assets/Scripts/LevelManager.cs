@@ -7,6 +7,8 @@ namespace Asteroid
         [SerializeField] private int asteroidCount;
         [SerializeField] private AsteroidSpawner spawner;
 
+        private int _asteroidDestroyed;
+
         private void Awake()
         {
             GameManager.OnGameStarts += LevelUp;
@@ -20,8 +22,9 @@ namespace Asteroid
 
         private void CheckLevelCondition()
         {
-            asteroidCount--;
-            if (asteroidCount <= 0)
+            _asteroidDestroyed++;
+            Debug.Log($"Count: {asteroidCount}, Destroyed: {_asteroidDestroyed}");
+            if (_asteroidDestroyed >= asteroidCount)
             {
                 GameManager.Instance.GameWin();
             }

@@ -6,7 +6,7 @@ namespace Asteroid
 {
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(HealthAbility))]
-    public class Asteroid : MonoBehaviour
+    public class Asteroid : PoolItem
     {
         private CapsuleCollider2D _collider;
         private HealthAbility _healthAbility;
@@ -21,13 +21,25 @@ namespace Asteroid
             _healthAbility = GetComponent<HealthAbility>();
             _collider = GetComponent<CapsuleCollider2D>();
 
-            model.gameObject.SetActive(true);
-            _collider.enabled = true;
-
             _healthAbility.OnDied += Death;
         }
 
-        private void Start()
+        public override void OnPoolIn()
+        {
+            _healthAbility.ResetHealth();
+            model.gameObject.SetActive(false);
+            _collider.enabled = false;
+        }
+
+        public override void OnPoolOut()
+        {
+            _healthAbility.ResetHealth();
+            Setup();
+            model.gameObject.SetActive(true);
+            _collider.enabled = true;
+        }
+
+        private void Setup()
         {
             var r = new Random();
 
@@ -45,8 +57,6 @@ namespace Asteroid
 
         private void Death(HealthAbility unused)
         {
-            model.gameObject.SetActive(false);
-            _collider.enabled = false;
             ReturnToPool();
             OnDestroyed?.Invoke();
         }

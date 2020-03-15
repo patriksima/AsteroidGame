@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidCount: 10
-  spawner: {fileID: 6232345079365861196, guid: 9e12aadd743423f4c88e7428c5c0786f, type: 3}
+  spawner: {fileID: 0}

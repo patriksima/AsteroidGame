@@ -2,17 +2,12 @@
 
 namespace Asteroid
 {
-    public class Missile : MonoBehaviour
+    public class Missile : PoolItem
     {
         private const float Speed = 10f;
         private const float Lifetime = 5f;
 
         private float _lifeTimer;
-
-        private void Awake()
-        {
-            gameObject.SetActive(true);
-        }
 
         private void Update()
         {
@@ -27,8 +22,6 @@ namespace Asteroid
 
         private void ReturnToPool()
         {
-            _lifeTimer = 0f;
-            gameObject.SetActive(false);
             MissilePool.Instance.Put(this);
         }
 
@@ -40,6 +33,12 @@ namespace Asteroid
                 damageable?.TakeDamage(1);
                 ReturnToPool();
             }
+        }
+
+        public override void OnPoolIn()
+        {
+            base.OnPoolIn();
+            _lifeTimer = 0f;
         }
     }
 }

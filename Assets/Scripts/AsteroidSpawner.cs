@@ -31,10 +31,10 @@ namespace Asteroid
                 var asteroid = AsteroidPool.Instance.Get();
                 asteroid.transform.position = new Vector3(_screenTopRight.x, _screenTopRight.y, 0f);
 
-                var scale = .5f + Random.value * 1.2f;
+                var scale = .75f + Random.value * 1.2f;
                 asteroid.transform.localScale = new Vector3(scale, scale, 0f);
 
-                yield return new WaitForSeconds(Random.value * 3f);
+                yield return new WaitForSeconds(1f + Random.value * 3f);
             }
         }
     }

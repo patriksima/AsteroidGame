@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\AsteroidDeadEffect.cs" />
      <Compile Include="Assets\Scripts\AsteroidDecay.cs" />
      <Compile Include="Assets\Scripts\AsteroidEuclideanTorus.cs" />
+     <Compile Include="Assets\Scripts\AsteroidExplosion.cs" />
      <Compile Include="Assets\Scripts\AsteroidExplosionAudio.cs" />
      <Compile Include="Assets\Scripts\AsteroidExplosionPool.cs" />
      <Compile Include="Assets\Scripts\AsteroidHitAudio.cs" />
@@ -82,6 +83,7 @@
      <Compile Include="Assets\Scripts\Missile.cs" />
      <Compile Include="Assets\Scripts\MissilePool.cs" />
      <Compile Include="Assets\Scripts\MoveController.cs" />
+     <Compile Include="Assets\Scripts\PoolItem.cs" />
      <Compile Include="Assets\Scripts\SceneManager.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\Ship.cs" />

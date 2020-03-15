@@ -5,7 +5,7 @@ namespace Asteroid
     [RequireComponent(typeof(WeaponAudio))]
     public class WeaponController : MonoBehaviour
     {
-        private const float FireRate = .3f;
+        private const float FireRate = .2f;
         private float _fireTimer;
 
         private WeaponAudio _weaponAudio;

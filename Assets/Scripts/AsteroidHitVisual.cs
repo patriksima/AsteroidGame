@@ -16,7 +16,6 @@ namespace Asteroid
                 var hitPoint = missileHit.point;
                 var explosion = AsteroidHitExplosionPool.Instance.Get();
                 explosion.transform.position = new Vector3(hitPoint.x, hitPoint.y, 0);
-                explosion.gameObject.SetActive(true);
                 explosion.Play();
             }
         }
