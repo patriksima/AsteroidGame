@@ -44,7 +44,7 @@ namespace Asteroid
 
         public void Quit()
         {
-            Application.Quit();
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenuScene");
         }
 
         private void ReloadGame()

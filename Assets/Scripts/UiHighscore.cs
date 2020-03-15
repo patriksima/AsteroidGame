@@ -10,6 +10,7 @@ namespace Asteroid
 
         private void Awake()
         {
+            UpdateHighscoreText();
             GameManager.OnGameStarts += UpdateHighscoreText;
         }
 

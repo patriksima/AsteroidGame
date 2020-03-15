@@ -10,6 +10,8 @@ namespace Asteroid
 
         private void Awake()
         {
+            LoadHighScore();
+
             HealthAbility.OnDamage += UpdateScore;
 
             GameManager.OnGameStarts += LoadHighScore;
