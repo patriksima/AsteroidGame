@@ -6,47 +6,55 @@
     <e p="D:\Projects\Asteroids" t="IncludeRecursive">
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="Asteroid.cs" t="Include" />
-          <e p="AsteroidDeadEffect.cs" t="Include" />
-          <e p="AsteroidDecay.cs" t="Include" />
-          <e p="AsteroidEuclideanTorus.cs" t="Include" />
-          <e p="AsteroidExplosion.cs" t="Include" />
-          <e p="AsteroidExplosionAudio.cs" t="Include" />
-          <e p="AsteroidExplosionPool.cs" t="Include" />
-          <e p="AsteroidHitAudio.cs" t="Include" />
-          <e p="AsteroidHitExplosion.cs" t="Include" />
-          <e p="AsteroidHitExplosionPool.cs" t="Include" />
-          <e p="AsteroidHitVisual.cs" t="Include" />
-          <e p="AsteroidPool.cs" t="Include" />
-          <e p="AsteroidSpawner.cs" t="Include" />
-          <e p="BoundsController.cs" t="Include" />
-          <e p="ButtonHoverSound.cs" t="Include" />
+          <e p="Asteroid" t="Include">
+            <e p="Asteroid.cs" t="Include" />
+            <e p="AsteroidDeadEffect.cs" t="Include" />
+            <e p="AsteroidDecay.cs" t="Include" />
+            <e p="AsteroidEuclideanTorus.cs" t="Include" />
+            <e p="AsteroidExplosion.cs" t="Include" />
+            <e p="AsteroidExplosionAudio.cs" t="Include" />
+            <e p="AsteroidExplosionPool.cs" t="Include" />
+            <e p="AsteroidHitAudio.cs" t="Include" />
+            <e p="AsteroidHitExplosion.cs" t="Include" />
+            <e p="AsteroidHitExplosionPool.cs" t="Include" />
+            <e p="AsteroidHitVisual.cs" t="Include" />
+            <e p="AsteroidPool.cs" t="Include" />
+            <e p="AsteroidSpawner.cs" t="Include" />
+            <e p="HealthAbility.cs" t="Include" />
+          </e>
           <e p="Cosmos.cs" t="Include" />
-          <e p="FlameController.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="GenericPool.cs" t="Include" />
-          <e p="HealthAbility.cs" t="Include" />
           <e p="ITakeDamage.cs" t="Include" />
           <e p="LevelManager.cs" t="Include" />
-          <e p="Missile.cs" t="Include" />
-          <e p="MissilePool.cs" t="Include" />
-          <e p="MoveController.cs" t="Include" />
+          <e p="Missile" t="Include">
+            <e p="Missile.cs" t="Include" />
+            <e p="MissilePool.cs" t="Include" />
+          </e>
           <e p="PoolItem.cs" t="Include" />
           <e p="SceneManager.cs" t="Include" />
           <e p="ScoreManager.cs" t="Include" />
-          <e p="Ship.cs" t="Include" />
-          <e p="ShipDeadEffect.cs" t="Include" />
-          <e p="ShipExplosionAudio.cs" t="Include" />
-          <e p="ShipHealth.cs" t="Include" />
+          <e p="Ship" t="Include">
+            <e p="BoundsController.cs" t="Include" />
+            <e p="FlameController.cs" t="Include" />
+            <e p="MoveController.cs" t="Include" />
+            <e p="Ship.cs" t="Include" />
+            <e p="ShipDeadEffect.cs" t="Include" />
+            <e p="ShipExplosionAudio.cs" t="Include" />
+            <e p="ShipHealth.cs" t="Include" />
+            <e p="WeaponAudio.cs" t="Include" />
+            <e p="WeaponController.cs" t="Include" />
+          </e>
           <e p="Singleton.cs" t="Include" />
-          <e p="UiCountdown.cs" t="Include" />
-          <e p="UiCredits.cs" t="Include" />
-          <e p="UIDamageCounter.cs" t="Include" />
-          <e p="UiGameOver.cs" t="Include" />
-          <e p="UiGameWin.cs" t="Include" />
-          <e p="UiHighscore.cs" t="Include" />
-          <e p="WeaponAudio.cs" t="Include" />
-          <e p="WeaponController.cs" t="Include" />
+          <e p="Ui" t="Include">
+            <e p="ButtonHoverSound.cs" t="Include" />
+            <e p="UiCountdown.cs" t="Include" />
+            <e p="UiCredits.cs" t="Include" />
+            <e p="UIDamageCounter.cs" t="Include" />
+            <e p="UiGameOver.cs" t="Include" />
+            <e p="UiGameWin.cs" t="Include" />
+            <e p="UiHighscore.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Asteroid.csproj" t="IncludeRecursive" />
