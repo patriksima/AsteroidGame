@@ -15,6 +15,7 @@ namespace Asteroid
 
             GameManager.OnGameStarts += LoadHighScore;
             GameManager.OnGameOver += CheckHighscore;
+            GameManager.OnGameWin += CheckHighscore;
         }
 
         private void LoadHighScore()
@@ -46,6 +47,7 @@ namespace Asteroid
             HealthAbility.OnDamage -= UpdateScore;
             GameManager.OnGameStarts -= LoadHighScore;
             GameManager.OnGameOver -= CheckHighscore;
+            GameManager.OnGameWin -= CheckHighscore;
         }
     }
 }
