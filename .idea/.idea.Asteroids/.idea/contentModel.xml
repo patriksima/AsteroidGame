@@ -22,6 +22,7 @@
             <e p="AsteroidSpawner.cs" t="Include" />
             <e p="HealthAbility.cs" t="Include" />
           </e>
+          <e p="AudioManager.cs" t="Include" />
           <e p="Cosmos.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="GenericPool.cs" t="Include" />
@@ -47,6 +48,7 @@
           </e>
           <e p="Singleton.cs" t="Include" />
           <e p="Ui" t="Include">
+            <e p="ButtonClickSound.cs" t="Include" />
             <e p="ButtonHoverSound.cs" t="Include" />
             <e p="UiCountdown.cs" t="Include" />
             <e p="UiCredits.cs" t="Include" />
