@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using Asteroid.Ui;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Asteroid
 {
@@ -16,7 +17,7 @@ namespace Asteroid
 
         public void StartGame()
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
         }
 
         public void Credits()

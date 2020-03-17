@@ -8,13 +8,14 @@ namespace Asteroid
         private int _currentScore;
         public int Highscore { get; private set; }
 
-        private void Awake()
+
+        protected override void Awake()
         {
+            base.Awake();
             LoadHighScore();
 
             HealthAbility.OnDamage += UpdateScore;
 
-            GameManager.OnGameStarts += LoadHighScore;
             GameManager.OnGameOver += CheckHighscore;
             GameManager.OnGameWin += CheckHighscore;
         }
@@ -46,7 +47,7 @@ namespace Asteroid
         private void OnDestroy()
         {
             HealthAbility.OnDamage -= UpdateScore;
-            GameManager.OnGameStarts -= LoadHighScore;
+
             GameManager.OnGameOver -= CheckHighscore;
             GameManager.OnGameWin -= CheckHighscore;
         }

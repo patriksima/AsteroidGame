@@ -3,17 +3,41 @@ using UnityEngine;
 
 namespace Asteroid
 {
-    public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+    public abstract class Singleton<T> : MonoBehaviour where T : Component
     {
-        private static readonly Lazy<T> LazyInstance = new Lazy<T>(CreateSingleton);
+        private static T _instance;
 
-        public static T Instance => LazyInstance.Value;
-
-        private static T CreateSingleton()
+        public static T Instance
         {
-            var instance = FindObjectOfType<T>(); // because it already exists in scene
-            DontDestroyOnLoad(instance.gameObject);
-            return instance;
+            get
+            {
+                if (_instance != null)
+                {
+                    return _instance;
+                }
+
+                _instance = FindObjectOfType<T>();
+                if (_instance != null)
+                {
+                    return _instance;
+                }
+
+                var obj = new GameObject {name = typeof(T).Name};
+                _instance = obj.AddComponent<T>();
+                return _instance;
+            }
+        }
+
+        protected virtual void Awake()
+        {
+            if (_instance == null)
+            {
+                _instance = this as T;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 
 namespace Asteroid.Ui
@@ -9,8 +10,12 @@ namespace Asteroid.Ui
 
         private void Awake()
         {
-            UpdateHighscoreText();
             GameManager.OnGameStarts += UpdateHighscoreText;
+        }
+
+        private void Start()
+        {
+            UpdateHighscoreText();
         }
 
         private void UpdateHighscoreText()

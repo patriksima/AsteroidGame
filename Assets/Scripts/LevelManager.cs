@@ -24,7 +24,6 @@ namespace Asteroid
         private void CheckLevelCondition()
         {
             _asteroidDestroyed++;
-            Debug.Log($"Count: {asteroidCount}, Destroyed: {_asteroidDestroyed}");
             if (_asteroidDestroyed >= asteroidCount)
             {
                 GameManager.Instance.GameWin();

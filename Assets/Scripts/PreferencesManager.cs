@@ -9,8 +9,9 @@ namespace Asteroid
     {
         [SerializeField] private AudioSource musicAudioSource;
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             if (PlayerPrefs.GetString("Music") == "Off")
             {
                 musicAudioSource.mute = true;

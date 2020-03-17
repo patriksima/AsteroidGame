@@ -27,8 +27,6 @@ namespace Asteroid.Ship
             // very simple eucledian thorus
             if (!_screenBounds.Contains(transform.position))
             {
-                // Debug.Log($"I am off now at {transform.position}");
-
                 if (transform.position.x < _screenBounds.xMin)
                 {
                     transform.position = new Vector3(_screenBounds.xMax, transform.position.y, transform.position.z);
