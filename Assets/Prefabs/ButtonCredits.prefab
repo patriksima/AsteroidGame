@@ -75,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 965590333303933447, guid: 4a85800787d825642b20e48381831817,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 965590333303933447, guid: 4a85800787d825642b20e48381831817,
         type: 3}
@@ -120,7 +120,7 @@ PrefabInstance:
     - target: {fileID: 3262604559817529902, guid: 4a85800787d825642b20e48381831817,
         type: 3}
       propertyPath: m_text
-      value: Credits
+      value: CREDITS
       objectReference: {fileID: 0}
     - target: {fileID: 3262604559817529902, guid: 4a85800787d825642b20e48381831817,
         type: 3}

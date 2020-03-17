@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Asteroid
+namespace Asteroid.Ship
 {
     public class WeaponAudio : MonoBehaviour
     {

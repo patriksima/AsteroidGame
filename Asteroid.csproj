@@ -58,6 +58,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Ammo\Missile.cs" />
+     <Compile Include="Assets\Scripts\Ammo\MissilePool.cs" />
      <Compile Include="Assets\Scripts\Asteroid\Asteroid.cs" />
      <Compile Include="Assets\Scripts\Asteroid\AsteroidDeadEffect.cs" />
      <Compile Include="Assets\Scripts\Asteroid\AsteroidDecay.cs" />
@@ -78,9 +80,8 @@
      <Compile Include="Assets\Scripts\GenericPool.cs" />
      <Compile Include="Assets\Scripts\ITakeDamage.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
-     <Compile Include="Assets\Scripts\Missile\Missile.cs" />
-     <Compile Include="Assets\Scripts\Missile\MissilePool.cs" />
      <Compile Include="Assets\Scripts\PoolItem.cs" />
+     <Compile Include="Assets\Scripts\PreferencesManager.cs" />
      <Compile Include="Assets\Scripts\SceneManager.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\Ship\BoundsController.cs" />
@@ -95,12 +96,15 @@
      <Compile Include="Assets\Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\Ui\ButtonClickSound.cs" />
      <Compile Include="Assets\Scripts\Ui\ButtonHoverSound.cs" />
+     <Compile Include="Assets\Scripts\Ui\UiCheckbox.cs" />
      <Compile Include="Assets\Scripts\Ui\UiCountdown.cs" />
      <Compile Include="Assets\Scripts\Ui\UiCredits.cs" />
      <Compile Include="Assets\Scripts\Ui\UiDamageCounter.cs" />
      <Compile Include="Assets\Scripts\Ui\UiGameOver.cs" />
      <Compile Include="Assets\Scripts\Ui\UiGameWin.cs" />
      <Compile Include="Assets\Scripts\Ui\UiHighscore.cs" />
+     <Compile Include="Assets\Scripts\Ui\UiMusicPreferences.cs" />
+     <Compile Include="Assets\Scripts\Ui\UiSettings.cs" />
  <Reference Include="Unity.TextMeshPro">
  <HintPath>D:/Projects/Asteroids/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>

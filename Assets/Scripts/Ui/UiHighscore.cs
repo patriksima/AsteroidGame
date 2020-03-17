@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-namespace Asteroid
+namespace Asteroid.Ui
 {
     public class UiHighscore : MonoBehaviour
     {

@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Asteroid
+namespace Asteroid.Ui
 {
     public class ButtonClickSound : MonoBehaviour, IPointerClickHandler
     {

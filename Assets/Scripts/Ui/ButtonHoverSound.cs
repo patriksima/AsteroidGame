@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Asteroid
+namespace Asteroid.Ui
 {
     public class ButtonHoverSound : MonoBehaviour, IPointerEnterHandler
     {

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Asteroid.Asteroid;
+using UnityEngine;
 
 namespace Asteroid
 {

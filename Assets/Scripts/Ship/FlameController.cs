@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Asteroid
+namespace Asteroid.Ship
 {
     [RequireComponent(typeof(MoveController))]
     public class FlameController : MonoBehaviour

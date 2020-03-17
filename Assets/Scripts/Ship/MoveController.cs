@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Asteroid
+namespace Asteroid.Ship
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public class MoveController : MonoBehaviour

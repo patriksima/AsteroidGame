@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Asteroid
+namespace Asteroid.Ship
 {
     public class ShipHealth : MonoBehaviour, ITakeDamage
     {

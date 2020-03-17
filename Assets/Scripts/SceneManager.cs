@@ -1,11 +1,13 @@
 ﻿using System.Collections;
+using Asteroid.Ui;
 using UnityEngine;
 
 namespace Asteroid
 {
     public class SceneManager : Singleton<SceneManager>
     {
-        [SerializeField] private UiCredits credits;
+        [SerializeField] private UiCredits uiCredits;
+        [SerializeField] private UiSettings uiSettings;
 
         private void Start()
         {
@@ -19,7 +21,12 @@ namespace Asteroid
 
         public void Credits()
         {
-            credits.Show();
+            uiCredits.Show();
+        }
+
+        public void Settings()
+        {
+            uiSettings.Show();
         }
 
         public void Quit()

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Asteroid.Asteroid;
+using UnityEngine;
 
 namespace Asteroid
 {
@@ -12,7 +13,7 @@ namespace Asteroid
         private void Awake()
         {
             GameManager.OnGameStarts += LevelUp;
-            Asteroid.OnDestroyed += CheckLevelCondition;
+            Asteroid.Asteroid.OnDestroyed += CheckLevelCondition;
         }
 
         private void LevelUp()
@@ -33,7 +34,7 @@ namespace Asteroid
         private void OnDestroy()
         {
             GameManager.OnGameStarts -= LevelUp;
-            Asteroid.OnDestroyed -= CheckLevelCondition;
+            Asteroid.Asteroid.OnDestroyed -= CheckLevelCondition;
         }
     }
 }

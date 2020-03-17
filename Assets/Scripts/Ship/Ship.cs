@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Asteroid
+namespace Asteroid.Ship
 {
     [RequireComponent(typeof(BoxCollider2D))]
     [RequireComponent(typeof(ShipHealth))]

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Assertions;
 
-namespace Asteroid
+namespace Asteroid.Asteroid
 {
     public class AsteroidEuclideanTorus : MonoBehaviour
     {

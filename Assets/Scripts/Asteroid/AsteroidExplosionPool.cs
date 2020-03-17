@@ -1,7 +1,4 @@
-﻿using UnityEditor;
-using UnityEngine;
-
-namespace Asteroid
+﻿namespace Asteroid.Asteroid
 {
 
     public class AsteroidExplosionPool : GenericPool<AsteroidExplosion>

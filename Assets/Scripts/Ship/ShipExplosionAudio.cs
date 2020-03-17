@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Assertions;
 
-namespace Asteroid
+namespace Asteroid.Ship
 {
     [RequireComponent(typeof(AudioSource))]
     [RequireComponent(typeof(ShipHealth))]

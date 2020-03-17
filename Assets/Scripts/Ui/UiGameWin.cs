@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Asteroid
+namespace Asteroid.Ui
 {
     public class UiGameWin : MonoBehaviour
     {

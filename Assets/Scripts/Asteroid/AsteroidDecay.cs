@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Asteroid
+namespace Asteroid.Asteroid
 {
     [RequireComponent(typeof(HealthAbility))]
     public class AsteroidDecay : MonoBehaviour

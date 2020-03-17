@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace Asteroid
+namespace Asteroid.Asteroid
 {
     [RequireComponent(typeof(AudioSource))]
     public class AsteroidHitAudio : MonoBehaviour

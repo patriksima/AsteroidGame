@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Asteroid
+namespace Asteroid.Ui
 {
     public class UiCredits : MonoBehaviour
     {

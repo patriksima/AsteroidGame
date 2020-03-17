@@ -1730,7 +1730,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HIGH:'
+  m_text: 'HIGHEST:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 04954465aa947594a97cf3895c52c92d, type: 2}
   m_sharedMaterial: {fileID: 7986523381450847625, guid: 04954465aa947594a97cf3895c52c92d,
@@ -1800,7 +1800,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 732002459}
-    characterCount: 5
+    characterCount: 8
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -3284,6 +3284,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03edca4a04d565244974ac61e155261b, type: 3}
+--- !u!1001 &8940498533042143749
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3559987365842431286, guid: fdff0010d42d733428270467100725a9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559987365842431286, guid: fdff0010d42d733428270467100725a9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559987365842431286, guid: fdff0010d42d733428270467100725a9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559987365842431286, guid: fdff0010d42d733428270467100725a9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559987365842431286, guid: fdff0010d42d733428270467100725a9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559987365842431286, guid: fdff0010d42d733428270467100725a9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559987365842431286, guid: fdff0010d42d733428270467100725a9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559987365842431286, guid: fdff0010d42d733428270467100725a9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559987365842431286, guid: fdff0010d42d733428270467100725a9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559987365842431286, guid: fdff0010d42d733428270467100725a9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559987365842431286, guid: fdff0010d42d733428270467100725a9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000014962629723015, guid: fdff0010d42d733428270467100725a9,
+        type: 3}
+      propertyPath: musicAudioSource
+      value: 
+      objectReference: {fileID: 946113792}
+    - target: {fileID: 9177400421731794825, guid: fdff0010d42d733428270467100725a9,
+        type: 3}
+      propertyPath: m_Name
+      value: PreferencesManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fdff0010d42d733428270467100725a9, type: 3}
 --- !u!1001 &9217753514687011275
 PrefabInstance:
   m_ObjectHideFlags: 0

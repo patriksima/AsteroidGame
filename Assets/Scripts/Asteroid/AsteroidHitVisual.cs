@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Asteroid
+namespace Asteroid.Asteroid
 {
     public class AsteroidHitVisual : MonoBehaviour
     {

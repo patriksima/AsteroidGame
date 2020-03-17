@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Asteroid.Ammo;
+using UnityEngine;
 
-namespace Asteroid
+namespace Asteroid.Ship
 {
     [RequireComponent(typeof(WeaponAudio))]
     public class WeaponController : MonoBehaviour

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace Asteroid
+namespace Asteroid.Asteroid
 {
     public class AsteroidExplosion : PoolItem
     {

@@ -447,8 +447,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 199.21, y: -164.3}
-  m_SizeDelta: {x: 378.42, y: 288.6}
+  m_AnchoredPosition: {x: 199.21, y: -188.755}
+  m_SizeDelta: {x: 378.42, y: 337.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2838236483181148325
 CanvasRenderer:
@@ -479,8 +479,9 @@ MonoBehaviour:
   m_text: "Author\nPatrik \u0160\xEDma\npatrik.sima@gmail.com\n\nAssets\nOpenGameArt.org\nUnity
     Asset Store"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 04954465aa947594a97cf3895c52c92d, type: 2}
+  m_sharedMaterial: {fileID: 7986523381450847625, guid: 04954465aa947594a97cf3895c52c92d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -551,13 +552,13 @@ MonoBehaviour:
     spaceCount: 9
     wordCount: 13
     linkCount: 0
-    lineCount: 7
+    lineCount: 8
     pageCount: 1
-    materialCount: 2
+    materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 2838236482715347643}
@@ -687,7 +688,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2838236483879642123}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.9999959
+  m_Size: 0.9999962
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -727,8 +728,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0015872086, y: 0}
-  m_SizeDelta: {x: -19.579987, y: -54.799988}
+  m_AnchoredPosition: {x: 0.0000021264436, y: 0}
+  m_SizeDelta: {x: -19.579987, y: -5.889984}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2838236483613475274
 MonoBehaviour:
@@ -802,7 +803,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.99999577, y: 1}
+  m_AnchorMax: {x: 0.9999962, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}

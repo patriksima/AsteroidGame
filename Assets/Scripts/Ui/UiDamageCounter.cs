@@ -1,7 +1,8 @@
-﻿using TMPro;
+﻿using Asteroid.Asteroid;
+using TMPro;
 using UnityEngine;
 
-namespace Asteroid
+namespace Asteroid.Ui
 {
     public class UiDamageCounter : MonoBehaviour
     {

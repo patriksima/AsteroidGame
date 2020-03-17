@@ -1,7 +1,7 @@
-﻿using System.Collections;
+﻿using Asteroid.Asteroid;
 using UnityEngine;
 
-namespace Asteroid
+namespace Asteroid.Ship
 {
     public class ShipDeadEffect : MonoBehaviour
     {

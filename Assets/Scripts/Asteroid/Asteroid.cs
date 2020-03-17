@@ -2,7 +2,7 @@
 using UnityEngine;
 using Random = System.Random;
 
-namespace Asteroid
+namespace Asteroid.Asteroid
 {
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(HealthAbility))]

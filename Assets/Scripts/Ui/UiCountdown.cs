@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace Asteroid
+namespace Asteroid.Ui
 {
     [RequireComponent(typeof(AudioSource))]
     public class UiCountdown : MonoBehaviour
