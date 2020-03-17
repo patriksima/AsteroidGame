@@ -11,11 +11,6 @@ namespace Asteroid.Asteroid
 
         public int InitialHealth => initialHealth;
 
-        public void ResetHealth()
-        {
-            CurrentHealth = initialHealth;
-        }
-
         public void TakeDamage(int damage)
         {
             CurrentHealth -= damage;
@@ -26,6 +21,11 @@ namespace Asteroid.Asteroid
             {
                 OnDied?.Invoke(this);
             }
+        }
+
+        public void ResetHealth()
+        {
+            CurrentHealth = initialHealth;
         }
 
         public event Action<HealthAbility> OnDied;

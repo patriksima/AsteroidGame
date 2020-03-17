@@ -125,22 +125,22 @@ PrefabInstance:
     - target: {fileID: 3262604559817529902, guid: 4a85800787d825642b20e48381831817,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3262604559817529902, guid: 4a85800787d825642b20e48381831817,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3262604559817529902, guid: 4a85800787d825642b20e48381831817,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3262604559817529902, guid: 4a85800787d825642b20e48381831817,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4913533182840946406, guid: 4a85800787d825642b20e48381831817,
         type: 3}

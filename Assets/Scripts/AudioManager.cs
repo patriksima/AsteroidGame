@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Assertions;
 
 namespace Asteroid
@@ -7,15 +6,13 @@ namespace Asteroid
     [RequireComponent(typeof(AudioSource))]
     public class AudioManager : Singleton<AudioManager>
     {
-        private AudioSource _audioSource;
+        public AudioSource AudioSource { get; private set; }
 
         protected override void Awake()
         {
             base.Awake();
-            _audioSource = GetComponent<AudioSource>();
-            Assert.IsNotNull(_audioSource);
+            AudioSource = GetComponent<AudioSource>();
+            Assert.IsNotNull(AudioSource);
         }
-
-        public AudioSource AudioSource => _audioSource;
     }
 }

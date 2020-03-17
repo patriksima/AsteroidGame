@@ -28,6 +28,7 @@ namespace Asteroid
             {
                 Quit();
             }
+
 /*
             if (Input.GetKeyDown("space"))
             {

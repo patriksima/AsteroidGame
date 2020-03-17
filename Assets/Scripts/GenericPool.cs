@@ -5,8 +5,8 @@ namespace Asteroid
 {
     public abstract class GenericPool<T> : MonoBehaviour where T : PoolItem
     {
-        protected int InitialCount;
         private readonly Queue<T> _components = new Queue<T>();
+        protected int InitialCount;
         [SerializeField] private T prefab;
 
         public static GenericPool<T> Instance { get; private set; }

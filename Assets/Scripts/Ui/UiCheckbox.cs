@@ -9,21 +9,13 @@ namespace Asteroid.Ui
 {
     public class UiCheckbox : MonoBehaviour, IPointerClickHandler
     {
-        public event Action<bool> OnChange;
-
-        [Description("Checkbox ON sprite")] [SerializeField]
-        private Sprite sprite;
-
-        private bool _state;
         private Image _image;
         private Sprite _origin;
 
-        private void Awake()
-        {
-            _image = GetComponent<Image>();
-            _origin = _image.sprite;
-            ToggleSprite();
-        }
+        private bool _state;
+
+        [Description("Checkbox ON sprite")] [SerializeField]
+        private Sprite sprite;
 
         public void OnPointerClick(PointerEventData eventData)
         {
@@ -31,14 +23,18 @@ namespace Asteroid.Ui
             ToggleSprite();
         }
 
+        public event Action<bool> OnChange;
+
+        private void Awake()
+        {
+            _image = GetComponent<Image>();
+            Assert.IsNotNull(_image);
+            _origin = _image.sprite;
+        }
+
         private void ToggleSprite()
         {
-            Assert.IsNotNull(_image);
-            Assert.IsNotNull(_image.sprite);
-            _image.sprite =
-                (_state) ?
-                    sprite :
-                    _origin;
+            _image.sprite = _state ? sprite : _origin;
             OnChange?.Invoke(_state);
         }
 

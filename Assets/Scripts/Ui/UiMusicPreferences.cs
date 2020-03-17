@@ -1,33 +1,22 @@
-﻿using System;
-using System.ComponentModel;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace Asteroid.Ui
 {
     public class UiMusicPreferences : MonoBehaviour
     {
         private UiCheckbox _checkbox;
-
-        [Description("Music On/Off")] [SerializeField]
-        private bool defaultMusicState;
-
         private bool _musicState;
 
         private void Awake()
         {
             _checkbox = GetComponent<UiCheckbox>();
+            Assert.IsNotNull(_checkbox);
+
+            var prefMusic = PlayerPrefs.GetString("Music", "On");
+            _musicState = prefMusic == "On";
+
             _checkbox.OnChange += ChangeMusicPreferences;
-
-            var prefMusic = PlayerPrefs.GetString("Music");
-
-            if (string.IsNullOrEmpty(prefMusic))
-            {
-                ChangeMusicPreferences(defaultMusicState);
-            }
-            else
-            {
-                _musicState = prefMusic == "On";
-            }
         }
 
         private void Start()

@@ -5,10 +5,9 @@ namespace Asteroid
 {
     public class LevelManager : MonoBehaviour
     {
+        private int _asteroidDestroyed;
         [SerializeField] private int asteroidCount;
         [SerializeField] private AsteroidSpawner spawner;
-
-        private int _asteroidDestroyed;
 
         private void Awake()
         {
