@@ -28,19 +28,6 @@ namespace Asteroid
             {
                 Quit();
             }
-
-/*
-            if (Input.GetKeyDown("space"))
-            {
-                _paused = !_paused;
-                Time.timeScale = _paused ? 0f : 1f;
-            }
-
-            if (Input.GetKeyDown("return"))
-            {
-                ReloadGame();
-            }
-*/
         }
 
         public void Quit()

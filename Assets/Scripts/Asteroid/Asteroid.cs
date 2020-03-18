@@ -24,6 +24,11 @@ namespace Asteroid.Asteroid
             _healthAbility.OnDied += Death;
         }
 
+        private void Update()
+        {
+            Debug.DrawRay(transform.position, _rigidbody.velocity * 10f, Color.green);
+        }
+
         public override void OnPoolIn()
         {
             _healthAbility.ResetHealth();
@@ -34,25 +39,8 @@ namespace Asteroid.Asteroid
         public override void OnPoolOut()
         {
             _healthAbility.ResetHealth();
-            Setup();
             model.gameObject.SetActive(true);
             _collider.enabled = true;
-        }
-
-        private void Setup()
-        {
-            var r = new Random();
-
-            var x = (float) r.NextDouble() + .5f;
-            var y = (float) r.NextDouble() + .5f;
-            var f = (float) r.NextDouble() * 30f + 60f;
-            var d1 = r.Next(0, 2) == 1 ? -1f : 1f;
-            var d2 = r.Next(0, 2) == 1 ? -1f : 1f;
-
-            var velocity = new Vector2(x * d1, y * d2);
-
-            _rigidbody.velocity = velocity;
-            _rigidbody.angularVelocity = 1f + (float) r.NextDouble() * 100f * d1;
         }
 
         private void Death(HealthAbility unused)

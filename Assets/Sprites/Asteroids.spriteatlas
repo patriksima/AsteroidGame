@@ -50,18 +50,34 @@ SpriteAtlas:
   - {fileID: -8457723990739998261, guid: f7e6a2d0d317b654e9deb79339bce71f, type: 3}
   - {fileID: -3923483010616583243, guid: f7e6a2d0d317b654e9deb79339bce71f, type: 3}
   - {fileID: -1737250862245870041, guid: f7e6a2d0d317b654e9deb79339bce71f, type: 3}
-  - {fileID: 21300000, guid: ac701e528125d6248a3f0d0076f2dec6, type: 3}
-  - {fileID: 21300000, guid: 60eabac3014bdb74fa30f0e064195e51, type: 3}
-  - {fileID: 21300000, guid: b07eeb866a59a8f4ca15e91cb17124bf, type: 3}
-  - {fileID: 21300000, guid: 9c0de0ca91485034882041019afb67ba, type: 3}
-  - {fileID: 21300000, guid: 8cfc990b55c953a4ca0a3a7d8d1120f5, type: 3}
+  - {fileID: -7845028522691373428, guid: ac701e528125d6248a3f0d0076f2dec6, type: 3}
+  - {fileID: 5308454008156693789, guid: ac701e528125d6248a3f0d0076f2dec6, type: 3}
+  - {fileID: 764946483841498670, guid: 60eabac3014bdb74fa30f0e064195e51, type: 3}
+  - {fileID: 3252496528444502764, guid: 60eabac3014bdb74fa30f0e064195e51, type: 3}
+  - {fileID: 5476775951647407192, guid: 60eabac3014bdb74fa30f0e064195e51, type: 3}
+  - {fileID: -5851397263181189301, guid: b07eeb866a59a8f4ca15e91cb17124bf, type: 3}
+  - {fileID: 626827161715791809, guid: b07eeb866a59a8f4ca15e91cb17124bf, type: 3}
+  - {fileID: 6228621980044899736, guid: b07eeb866a59a8f4ca15e91cb17124bf, type: 3}
+  - {fileID: 9146126386199250798, guid: 9c0de0ca91485034882041019afb67ba, type: 3}
+  - {fileID: 8892788301006679565, guid: 9c0de0ca91485034882041019afb67ba, type: 3}
+  - {fileID: -5738640434332692876, guid: 9c0de0ca91485034882041019afb67ba, type: 3}
+  - {fileID: -5170090221424156069, guid: 8cfc990b55c953a4ca0a3a7d8d1120f5, type: 3}
+  - {fileID: -6375572335398570957, guid: 8cfc990b55c953a4ca0a3a7d8d1120f5, type: 3}
+  - {fileID: 2399417344990913734, guid: 8cfc990b55c953a4ca0a3a7d8d1120f5, type: 3}
   - {fileID: 414181342771737659, guid: 30b3359bdef6ec345a05455d09ad5550, type: 3}
   - {fileID: -3833436031787591468, guid: 30b3359bdef6ec345a05455d09ad5550, type: 3}
   - {fileID: -504360028419417018, guid: 30b3359bdef6ec345a05455d09ad5550, type: 3}
   - {fileID: 219437966584090181, guid: 30b3359bdef6ec345a05455d09ad5550, type: 3}
-  - {fileID: 21300000, guid: 67b6d84c874159d479705c25efbbc3a2, type: 3}
-  - {fileID: 21300000, guid: e25c2b6cf6760944b937d5f9f2e0386d, type: 3}
-  - {fileID: 21300000, guid: 9caefbacaca840549b0de47fb69a7720, type: 3}
+  - {fileID: 3524080168436592791, guid: 67b6d84c874159d479705c25efbbc3a2, type: 3}
+  - {fileID: 4049263810762425737, guid: 67b6d84c874159d479705c25efbbc3a2, type: 3}
+  - {fileID: -7631964314911740328, guid: 67b6d84c874159d479705c25efbbc3a2, type: 3}
+  - {fileID: 8019175454878925964, guid: e25c2b6cf6760944b937d5f9f2e0386d, type: 3}
+  - {fileID: 5621601873703707723, guid: e25c2b6cf6760944b937d5f9f2e0386d, type: 3}
+  - {fileID: -4206733288536422395, guid: e25c2b6cf6760944b937d5f9f2e0386d, type: 3}
+  - {fileID: -5943565460469615325, guid: e25c2b6cf6760944b937d5f9f2e0386d, type: 3}
+  - {fileID: -4654760777814288191, guid: 9caefbacaca840549b0de47fb69a7720, type: 3}
+  - {fileID: -5385540534337637331, guid: 9caefbacaca840549b0de47fb69a7720, type: 3}
+  - {fileID: -1591538119533953552, guid: 9caefbacaca840549b0de47fb69a7720, type: 3}
   - {fileID: 9097014453191235531, guid: 9b76cfedaf1990d4a85f924fcef02cba, type: 3}
   - {fileID: 5267365428097030844, guid: 9b76cfedaf1990d4a85f924fcef02cba, type: 3}
   - {fileID: 991944377331223647, guid: 9b76cfedaf1990d4a85f924fcef02cba, type: 3}
@@ -72,25 +88,47 @@ SpriteAtlas:
   - {fileID: 2227325671159178008, guid: 0815bf2ebd5705048b58570621c1dd4f, type: 3}
   - {fileID: 4033895149298640216, guid: 0815bf2ebd5705048b58570621c1dd4f, type: 3}
   - {fileID: 5155275076839896191, guid: 0815bf2ebd5705048b58570621c1dd4f, type: 3}
-  - {fileID: 21300000, guid: ff5c81de04e664e4ca19ba2d41df2ae5, type: 3}
-  - {fileID: 21300000, guid: 475dd40f92de4944c8f8394c2c2dd9f5, type: 3}
-  - {fileID: 21300000, guid: 7f61e18fb186aa94aaf77d5ab3305d46, type: 3}
+  - {fileID: 6614722288782749848, guid: ff5c81de04e664e4ca19ba2d41df2ae5, type: 3}
+  - {fileID: 5710230406586871997, guid: ff5c81de04e664e4ca19ba2d41df2ae5, type: 3}
+  - {fileID: 7524608482981725844, guid: ff5c81de04e664e4ca19ba2d41df2ae5, type: 3}
+  - {fileID: -4421190213704692138, guid: ff5c81de04e664e4ca19ba2d41df2ae5, type: 3}
+  - {fileID: 1713413734391772518, guid: 475dd40f92de4944c8f8394c2c2dd9f5, type: 3}
+  - {fileID: 585611645042730090, guid: 475dd40f92de4944c8f8394c2c2dd9f5, type: 3}
+  - {fileID: 7079175332414863301, guid: 7f61e18fb186aa94aaf77d5ab3305d46, type: 3}
+  - {fileID: -7928284339182640384, guid: 7f61e18fb186aa94aaf77d5ab3305d46, type: 3}
+  - {fileID: -5968169416315445982, guid: 7f61e18fb186aa94aaf77d5ab3305d46, type: 3}
   m_PackedSpriteNamesToIndex:
   - asteroid_06_with_cracks_2
   - asteroid_06_with_cracks_1
   - asteroid_06_with_cracks_0
-  - asteroid_15_with_cracks
-  - asteroid_07_with_cracks
-  - asteroid_12_with_cracks
-  - asteroid_08_with_cracks
-  - asteroid_09_with_cracks
+  - asteroid_15_with_cracks_1
+  - asteroid_15_with_cracks_0
+  - asteroid_07_with_cracks_2
+  - asteroid_07_with_cracks_0
+  - asteroid_07_with_cracks_1
+  - asteroid_12_with_cracks_0
+  - asteroid_12_with_cracks_1
+  - asteroid_12_with_cracks_2
+  - asteroid_08_with_cracks_1
+  - asteroid_08_with_cracks_0
+  - asteroid_08_with_cracks_2
+  - asteroid_09_with_cracks_0
+  - asteroid_09_with_cracks_1
+  - asteroid_09_with_cracks_2
   - asteroid_03_with_cracks_2
   - asteroid_03_with_cracks_3
   - asteroid_03_with_cracks_0
   - asteroid_03_with_cracks_1
-  - asteroid_13_with_cracks
-  - asteroid_05_with_cracks
-  - asteroid_11_with_cracks
+  - asteroid_13_with_cracks_1
+  - asteroid_13_with_cracks_0
+  - asteroid_13_with_cracks_2
+  - asteroid_05_with_cracks_0
+  - asteroid_05_with_cracks_1
+  - asteroid_05_with_cracks_2
+  - asteroid_05_with_cracks_3
+  - asteroid_11_with_cracks_2
+  - asteroid_11_with_cracks_1
+  - asteroid_11_with_cracks_0
   - asteroid_01_with_cracks_0
   - asteroid_01_with_cracks_1
   - asteroid_01_with_cracks_2
@@ -101,8 +139,14 @@ SpriteAtlas:
   - asteroid_02_with_cracks_2
   - asteroid_02_with_cracks_1
   - asteroid_02_with_cracks_0
-  - asteroid_04_with_cracks
-  - asteroid_14_with_cracks
-  - asteroid_10_with_cracks
+  - asteroid_04_with_cracks_1
+  - asteroid_04_with_cracks_0
+  - asteroid_04_with_cracks_3
+  - asteroid_04_with_cracks_2
+  - asteroid_14_with_cracks_0
+  - asteroid_14_with_cracks_1
+  - asteroid_10_with_cracks_2
+  - asteroid_10_with_cracks_0
+  - asteroid_10_with_cracks_1
   m_Tag: Asteroids
   m_IsVariant: 0

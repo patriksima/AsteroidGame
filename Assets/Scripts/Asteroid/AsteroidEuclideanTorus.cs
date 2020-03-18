@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 using UnityEngine.Assertions;
 
 namespace Asteroid.Asteroid
@@ -22,26 +24,36 @@ namespace Asteroid.Asteroid
                 screenTopRight.y + colliderSize.y);
         }
 
-        private void Update()
+        private void Start()
         {
-            if (transform.position.x < _screenBounds.xMin)
-            {
-                transform.position = new Vector3(_screenBounds.xMax, transform.position.y, transform.position.z);
-            }
+            StartCoroutine(DoCheck());
+        }
 
-            if (transform.position.x > _screenBounds.xMax)
+        private IEnumerator DoCheck()
+        {
+            while (true)
             {
-                transform.position = new Vector3(_screenBounds.xMin, transform.position.y, transform.position.z);
-            }
+                if (transform.position.x < _screenBounds.xMin)
+                {
+                    transform.position = new Vector3(_screenBounds.xMax, transform.position.y, transform.position.z);
+                }
 
-            if (transform.position.y < _screenBounds.yMin)
-            {
-                transform.position = new Vector3(transform.position.x, _screenBounds.yMax, transform.position.z);
-            }
+                if (transform.position.x > _screenBounds.xMax)
+                {
+                    transform.position = new Vector3(_screenBounds.xMin, transform.position.y, transform.position.z);
+                }
 
-            if (transform.position.y > _screenBounds.yMax)
-            {
-                transform.position = new Vector3(transform.position.x, _screenBounds.yMin, transform.position.z);
+                if (transform.position.y < _screenBounds.yMin)
+                {
+                    transform.position = new Vector3(transform.position.x, _screenBounds.yMax, transform.position.z);
+                }
+
+                if (transform.position.y > _screenBounds.yMax)
+                {
+                    transform.position = new Vector3(transform.position.x, _screenBounds.yMin, transform.position.z);
+                }
+
+                yield return new WaitForSeconds(.1f);
             }
         }
     }
