@@ -43,7 +43,7 @@ namespace Asteroid.Asteroid
             _collider.enabled = true;
         }
 
-        private void Death(HealthAbility unused)
+        private void Death()
         {
             ReturnToPool();
             OnDestroyed?.Invoke();

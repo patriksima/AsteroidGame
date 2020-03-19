@@ -8,17 +8,39 @@ namespace Asteroid.Asteroid
 {
     public class AsteroidSpawner : MonoBehaviour
     {
+        public static AsteroidSpawner Instance { get; private set; }
+        
         private Camera _camera;
-        private Vector3 _screenBottomLeft;
-        private Vector3 _screenTopRight;
+        private Vector2 _bounds;
+
+        [MinMaxSlider(.1f, 10f)] [SerializeField]
+        private MinMax scale = new MinMax(1.5f, 2f);
+
+        [MinMaxSlider(.1f, 10f)] [SerializeField]
+        private MinMax spawnInterval = new MinMax(1f, 5f);
+
+        [MinMaxSlider(-300f, 300f)] [SerializeField]
+        private MinMax angularVelocity = new MinMax(-100f, 100f);
 
         private void Awake()
         {
+            if (Instance != null && Instance != this)
+            {
+                Destroy(gameObject);
+            }
+            Instance = this;
+            
             _camera = Camera.main;
             Assert.IsNotNull(_camera);
+            SetBounds();
+        }
 
-            _screenTopRight = _camera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-            _screenBottomLeft = _camera.ScreenToWorldPoint(Vector3.zero);
+        private void SetBounds()
+        {
+            var bl = _camera.ScreenToWorldPoint(Vector3.zero);
+
+            _bounds.x = -bl.x;
+            _bounds.y = -bl.y;
         }
 
         public void Spawn(int count)
@@ -31,49 +53,61 @@ namespace Asteroid.Asteroid
             for (var i = 0; i < count; i++)
             {
                 var asteroid = AsteroidPool.Instance.Get();
-                var rigidbody = asteroid.GetComponent<Rigidbody2D>();
+                var rb = asteroid.GetComponent<Rigidbody2D>();
 
-                Vector3 pos;
-                var side = Random.Range(0, 3);
-                switch (side)
-                {
-                    case 0: //left
-                        pos = new Vector3(_screenBottomLeft.x, Random.Range(_screenBottomLeft.y, _screenTopRight.y),
-                            0f);
-                        break;
-                    case 1: //top
-                        pos = new Vector3(Random.Range(_screenBottomLeft.x, _screenTopRight.x), _screenTopRight.y, 0f);
-                        break;
-                    case 2: //right
-                        pos = new Vector3(_screenTopRight.x, Random.Range(_screenBottomLeft.y, _screenTopRight.y), 0f);
-                        break;
-                    case 3: //bottom
-                        pos = new Vector3(Random.Range(_screenBottomLeft.x, _screenTopRight.x), _screenBottomLeft.y,
-                            0f);
-                        break;
-                    default:
-                        pos = Vector3.zero;
-                        break;
-                }
+                SetPosition(asteroid);
+                SetScale(asteroid);
+                SetRotation(rb);
+                SetVelocity(rb, asteroid.transform.position);
 
-                asteroid.transform.position = pos;
-
-                // Random scale
-                var scale = 1f + Random.value * 1.3f;
-                asteroid.transform.localScale = new Vector3(scale, scale, 0f);
-
-                // rotation
-                rigidbody.angularVelocity = Random.Range(-100f, 100f);
-
-                var start = new Vector2(pos.x, pos.y);
-                var end = Random.insideUnitCircle;
-                var vec = (end - start).normalized;
-                // direction
-                rigidbody.velocity = vec;
-
-                // Random wait to spawn another
-                yield return new WaitForSeconds(1f + Random.value * 3f);
+                yield return new WaitForSeconds(spawnInterval.RandomValue);
             }
+        }
+
+        private void SetVelocity(Rigidbody2D rb, Vector3 position)
+        {
+            var start = new Vector2(position.x, position.y);
+            var end = Random.insideUnitCircle;
+            var vec = (end - start).normalized;
+
+            rb.velocity = vec;
+        }
+
+        private void SetRotation(Rigidbody2D rb)
+        {
+            rb.angularVelocity = angularVelocity.RandomValue;
+        }
+
+        private void SetScale(PoolItem poolItem)
+        {
+            var localScale = scale.RandomValue;
+            poolItem.transform.localScale = new Vector3(localScale, localScale, 0f);
+        }
+
+        private void SetPosition(PoolItem poolItem)
+        {
+            Vector3 pos;
+
+            switch (Random.Range(0, 4))
+            {
+                case 0: //left
+                    pos = new Vector3(-_bounds.x, Random.Range(-_bounds.y, _bounds.y), 0f);
+                    break;
+                case 1: //top
+                    pos = new Vector3(Random.Range(-_bounds.x, _bounds.x), _bounds.y, 0f);
+                    break;
+                case 2: //right
+                    pos = new Vector3(_bounds.x, Random.Range(-_bounds.y, _bounds.y), 0f);
+                    break;
+                case 3: //bottom
+                    pos = new Vector3(Random.Range(-_bounds.x, _bounds.x), -_bounds.y, 0f);
+                    break;
+                default:
+                    pos = Vector3.zero;
+                    break;
+            }
+
+            poolItem.transform.position = pos;
         }
     }
 }

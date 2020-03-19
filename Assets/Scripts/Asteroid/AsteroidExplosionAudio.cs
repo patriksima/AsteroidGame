@@ -21,7 +21,7 @@ namespace Asteroid.Asteroid
             _healthAbility.OnDied += Play;
         }
 
-        private void Play(HealthAbility unused)
+        private void Play()
         {
             StartCoroutine(CoPlay());
         }

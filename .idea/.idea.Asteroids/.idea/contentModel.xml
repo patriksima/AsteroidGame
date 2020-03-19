@@ -32,6 +32,7 @@
           <e p="GenericPool.cs" t="Include" />
           <e p="ITakeDamage.cs" t="Include" />
           <e p="LevelManager.cs" t="Include" />
+          <e p="MinMax.cs" t="Include" />
           <e p="PoolItem.cs" t="Include" />
           <e p="PreferencesManager.cs" t="Include" />
           <e p="SceneManager.cs" t="Include" />

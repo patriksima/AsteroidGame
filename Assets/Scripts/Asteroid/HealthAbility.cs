@@ -19,7 +19,7 @@ namespace Asteroid.Asteroid
 
             if (CurrentHealth <= 0)
             {
-                OnDied?.Invoke(this);
+                OnDied?.Invoke();
             }
         }
 
@@ -28,7 +28,7 @@ namespace Asteroid.Asteroid
             CurrentHealth = initialHealth;
         }
 
-        public event Action<HealthAbility> OnDied;
+        public event Action OnDied;
 
         public static event Action<int> OnDamage;
 

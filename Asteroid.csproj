@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\GenericPool.cs" />
      <Compile Include="Assets\Scripts\ITakeDamage.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\MinMax.cs" />
      <Compile Include="Assets\Scripts\PoolItem.cs" />
      <Compile Include="Assets\Scripts\PreferencesManager.cs" />
      <Compile Include="Assets\Scripts\SceneManager.cs" />

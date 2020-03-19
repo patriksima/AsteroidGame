@@ -12,13 +12,13 @@ namespace Asteroid.Asteroid
             _healthAbility.OnDied += Play;
         }
 
-        private void Play(HealthAbility unused)
+        private void Play()
         {
             var explosion = AsteroidExplosionPool.Instance.Get();
-            var transform1 = explosion.transform;
-            transform1.position = transform.position;
-            transform1.rotation = transform.rotation;
-            transform1.localScale = transform.localScale * .15f;
+            explosion.transform.position = transform.position;
+            explosion.transform.rotation = transform.rotation;
+            // grow parent size doesnt work
+            explosion.GetComponentInChildren<ParticleSystem>().transform.localScale *= transform.localScale.x;
             explosion.Play();
         }
 

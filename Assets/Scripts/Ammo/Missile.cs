@@ -27,12 +27,14 @@ namespace Asteroid.Ammo
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.transform.CompareTag("Asteroid"))
+            if (!other.transform.CompareTag("Asteroid"))
             {
-                var damageable = other.collider.GetComponent<ITakeDamage>();
-                damageable?.TakeDamage(1);
-                ReturnToPool();
+                return;
             }
+
+            var damageable = other.collider.GetComponent<ITakeDamage>();
+            damageable?.TakeDamage(1);
+            ReturnToPool();
         }
 
         public override void OnPoolIn()
