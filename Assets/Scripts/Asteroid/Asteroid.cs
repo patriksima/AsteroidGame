@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using Random = System.Random;
 
@@ -45,13 +46,19 @@ namespace Asteroid.Asteroid
 
         private void Death()
         {
+            StartCoroutine(CoDeath());
+        }
+
+        private IEnumerator CoDeath()
+        {
             ReturnToPool();
+            yield return new WaitForSeconds(.1f);
             OnDestroyed?.Invoke();
         }
 
         private void ReturnToPool()
         {
-            AsteroidPool.Instance.Put(this);
+            AsteroidSmallPool.Instance.Put(this);
         }
 
         private void OnTriggerEnter2D(Collider2D other)

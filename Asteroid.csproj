@@ -60,6 +60,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Ammo\Missile.cs" />
      <Compile Include="Assets\Scripts\Ammo\MissilePool.cs" />
+     <Compile Include="Assets\Scripts\Asteroid\APool.cs" />
+     <Compile Include="Assets\Scripts\Asteroid\ASpawner.cs" />
      <Compile Include="Assets\Scripts\Asteroid\Asteroid.cs" />
      <Compile Include="Assets\Scripts\Asteroid\AsteroidDeadEffect.cs" />
      <Compile Include="Assets\Scripts\Asteroid\AsteroidDecay.cs" />
@@ -72,8 +74,12 @@
      <Compile Include="Assets\Scripts\Asteroid\AsteroidHitExplosionPool.cs" />
      <Compile Include="Assets\Scripts\Asteroid\AsteroidHitVisual.cs" />
      <Compile Include="Assets\Scripts\Asteroid\AsteroidPool.cs" />
+     <Compile Include="Assets\Scripts\Asteroid\AsteroidSmallPool.cs" />
+     <Compile Include="Assets\Scripts\Asteroid\AsteroidSmallSpawner.cs" />
      <Compile Include="Assets\Scripts\Asteroid\AsteroidSpawner.cs" />
+     <Compile Include="Assets\Scripts\Asteroid\AsteroidSplitter.cs" />
      <Compile Include="Assets\Scripts\Asteroid\HealthAbility.cs" />
+     <Compile Include="Assets\Scripts\Asteroid\ISplittable.cs" />
      <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\Cosmos.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -104,6 +110,7 @@
      <Compile Include="Assets\Scripts\Ui\UiGameOver.cs" />
      <Compile Include="Assets\Scripts\Ui\UiGameWin.cs" />
      <Compile Include="Assets\Scripts\Ui\UiHighscore.cs" />
+     <Compile Include="Assets\Scripts\Ui\UiLevelUp.cs" />
      <Compile Include="Assets\Scripts\Ui\UiMusicPreferences.cs" />
      <Compile Include="Assets\Scripts\Ui\UiSettings.cs" />
  <Reference Include="Unity.TextMeshPro">

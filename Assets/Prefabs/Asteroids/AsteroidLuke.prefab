@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 814013043634070763}
   - component: {fileID: 8962429613165713510}
   - component: {fileID: 3592613422812247179}
+  - component: {fileID: 220159072250907968}
   m_Layer: 0
   m_Name: AsteroidLuke
   m_TagString: Asteroid
@@ -364,3 +365,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 67c06f581243b4f41887a03c6eae453b, type: 3}
+--- !u!114 &220159072250907968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4464639257485725131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1025a65f9f164c3a97135de323d6b026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 4234567077523986392, guid: 5a4d5bd14dc5bd5408f69c36b8950000, type: 3}

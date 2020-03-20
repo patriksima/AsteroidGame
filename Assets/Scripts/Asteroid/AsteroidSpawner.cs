@@ -1,17 +1,20 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
-using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace Asteroid.Asteroid
 {
     public class AsteroidSpawner : MonoBehaviour
     {
-        public static AsteroidSpawner Instance { get; private set; }
-        
-        private Camera _camera;
         private Vector2 _bounds;
+
+        private Camera _camera;
+
+        [MinMaxSlider(-300f, 300f)] [SerializeField]
+        private MinMax angularVelocity = new MinMax(-100f, 100f);
 
         [MinMaxSlider(.1f, 10f)] [SerializeField]
         private MinMax scale = new MinMax(1.5f, 2f);
@@ -19,8 +22,7 @@ namespace Asteroid.Asteroid
         [MinMaxSlider(.1f, 10f)] [SerializeField]
         private MinMax spawnInterval = new MinMax(1f, 5f);
 
-        [MinMaxSlider(-300f, 300f)] [SerializeField]
-        private MinMax angularVelocity = new MinMax(-100f, 100f);
+        public static AsteroidSpawner Instance { get; private set; }
 
         private void Awake()
         {
@@ -28,8 +30,9 @@ namespace Asteroid.Asteroid
             {
                 Destroy(gameObject);
             }
+
             Instance = this;
-            
+
             _camera = Camera.main;
             Assert.IsNotNull(_camera);
             SetBounds();

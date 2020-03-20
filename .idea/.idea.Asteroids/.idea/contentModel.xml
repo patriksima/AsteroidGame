@@ -11,6 +11,8 @@
             <e p="MissilePool.cs" t="Include" />
           </e>
           <e p="Asteroid" t="Include">
+            <e p="APool.cs" t="Include" />
+            <e p="ASpawner.cs" t="Include" />
             <e p="Asteroid.cs" t="Include" />
             <e p="AsteroidDeadEffect.cs" t="Include" />
             <e p="AsteroidDecay.cs" t="Include" />
@@ -23,8 +25,12 @@
             <e p="AsteroidHitExplosionPool.cs" t="Include" />
             <e p="AsteroidHitVisual.cs" t="Include" />
             <e p="AsteroidPool.cs" t="Include" />
+            <e p="AsteroidSmallPool.cs" t="Include" />
+            <e p="AsteroidSmallSpawner.cs" t="Include" />
             <e p="AsteroidSpawner.cs" t="Include" />
+            <e p="AsteroidSplitter.cs" t="Include" />
             <e p="HealthAbility.cs" t="Include" />
+            <e p="ISplittable.cs" t="Include" />
           </e>
           <e p="AudioManager.cs" t="Include" />
           <e p="Cosmos.cs" t="Include" />
@@ -59,6 +65,7 @@
             <e p="UiGameOver.cs" t="Include" />
             <e p="UiGameWin.cs" t="Include" />
             <e p="UiHighscore.cs" t="Include" />
+            <e p="UiLevelUp.cs" t="Include" />
             <e p="UiMusicPreferences.cs" t="Include" />
             <e p="UiSettings.cs" t="Include" />
           </e>

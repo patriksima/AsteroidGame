@@ -24,6 +24,12 @@ namespace Asteroid.Ui
 
         private IEnumerator Countdown()
         {
+            gameObject.SetActive(true);
+
+            _audioSource.Play();
+            textMesh.text = "Get ready";
+            yield return new WaitForSeconds(2f);
+
             while (_countdownTime > 0)
             {
                 _audioSource.Play();

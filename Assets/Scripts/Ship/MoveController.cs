@@ -5,7 +5,7 @@ namespace Asteroid.Ship
     [RequireComponent(typeof(Rigidbody2D))]
     public class MoveController : MonoBehaviour
     {
-        private const float RotationSpeed = 90.0f;
+        private const float RotationSpeed = 50.0f;
         private const float ThrustForce = .9f;
 
         private Rigidbody2D _rigidbody;
@@ -23,8 +23,25 @@ namespace Asteroid.Ship
 
             IsMoving = !(Mathf.Approximately(v, 0f) && Mathf.Approximately(h, 0f));
 
-            // Rotate the ship if necessary
-            transform.Rotate(0, 0, -h * RotationSpeed * Time.fixedDeltaTime);
+            // Linear rotation (slow at small pressure, faster at bigger pressure)
+            const float t = .4f;
+            const float a = RotationSpeed - 10f / (1f - t);
+            const float b = RotationSpeed - a;
+
+            var speed = b / (1f - t) * h;
+            if (h <= -t)
+            {
+                speed = a * h - b;
+                speed *= 1 + Mathf.Abs(v);
+            }
+
+            if (h >= t)
+            {
+                speed = a * h + b;
+                speed *= 1 + Mathf.Abs(v);
+            }
+
+            transform.Rotate(0, 0, -speed * Time.fixedDeltaTime);
 
             // Thrust the ship if necessary
             // ReSharper disable once Unity.InefficientPropertyAccess

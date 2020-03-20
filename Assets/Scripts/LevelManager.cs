@@ -1,31 +1,56 @@
-﻿using Asteroid.Asteroid;
+﻿using System;
+using System.Collections;
+using Asteroid.Asteroid;
 using UnityEngine;
 
 namespace Asteroid
 {
     public class LevelManager : MonoBehaviour
     {
+        public static event Action<int> OnLevelUp;
+
         private int _asteroidDestroyed;
-        [SerializeField] private int asteroidCount;
+        private int _asteroidSpawned;
+        private int _level;
+
         [SerializeField] private AsteroidSpawner spawner;
+
+        [SerializeField] private int initialAsteroidCount = 10;
 
         private void Awake()
         {
             GameManager.OnGameStarts += LevelUp;
             Asteroid.Asteroid.OnDestroyed += CheckLevelCondition;
+            AsteroidSmallSpawner.OnSpawn += RaiseCount;
+        }
+
+        private void RaiseCount()
+        {
+            _asteroidSpawned++;
         }
 
         private void LevelUp()
         {
-            spawner.Spawn(asteroidCount);
+            OnLevelUp?.Invoke(_level);
+            StartCoroutine(CoLevelUp());
+        }
+
+        private IEnumerator CoLevelUp()
+        {
+            _asteroidDestroyed = 0;
+            _asteroidSpawned = initialAsteroidCount + _level;
+            yield return new WaitForSeconds(2f);
+
+            spawner.Spawn(_asteroidSpawned);
+            _level++;
         }
 
         private void CheckLevelCondition()
         {
             _asteroidDestroyed++;
-            if (_asteroidDestroyed >= asteroidCount)
+            if (_asteroidDestroyed >= _asteroidSpawned)
             {
-                GameManager.Instance.GameWin();
+                LevelUp();
             }
         }
 
@@ -33,6 +58,7 @@ namespace Asteroid
         {
             GameManager.OnGameStarts -= LevelUp;
             Asteroid.Asteroid.OnDestroyed -= CheckLevelCondition;
+            AsteroidSmallSpawner.OnSpawn -= RaiseCount;
         }
     }
 }

@@ -1,28 +1,28 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using Random = System.Random;
 
 namespace Asteroid.Asteroid
 {
-    public class AsteroidPool : MonoBehaviour
+    public class AsteroidPool : APool
     {
+        
+        private static readonly Random Rnd = new Random();
         private readonly Queue<PoolItem> _components = new Queue<PoolItem>();
-        private const int InitialCount = 10;
-        private static readonly System.Random Rnd = new System.Random();
+
+        [Range(1, 100)] [SerializeField] private int initialCount = 10;
 
         [SerializeField] private List<PoolItem> prefabs;
 
         public static AsteroidPool Instance { get; private set; }
 
-        private void Awake()
-        {
-            Instance = this;
-        }
-
-        public PoolItem Get()
+        public override PoolItem Get()
         {
             if (_components.Count == 0)
             {
-                AddRandomComponent(InitialCount);
+                AddRandomComponent(initialCount);
             }
 
             var component = _components.Dequeue();
@@ -31,10 +31,20 @@ namespace Asteroid.Asteroid
             return component;
         }
 
-        public void Put(PoolItem component)
+        public override void Put(PoolItem item)
         {
-            component.OnPoolIn();
-            _components.Enqueue(component);
+            item.OnPoolIn();
+            _components.Enqueue(item);
+        }
+
+        public override Type GetItemType()
+        {
+            return prefabs.GetType().GetGenericArguments().Single();
+        }
+        
+        private void Awake()
+        {
+            Instance = this;
         }
 
         private void AddRandomComponent(int count)
@@ -45,4 +55,5 @@ namespace Asteroid.Asteroid
             }
         }
     }
+    
 }
