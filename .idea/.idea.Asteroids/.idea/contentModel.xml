@@ -51,6 +51,7 @@
             <e p="ShipDeadEffect.cs" t="Include" />
             <e p="ShipExplosionAudio.cs" t="Include" />
             <e p="ShipHealth.cs" t="Include" />
+            <e p="ShipLevelSize.cs" t="Include" />
             <e p="WeaponAudio.cs" t="Include" />
             <e p="WeaponController.cs" t="Include" />
           </e>

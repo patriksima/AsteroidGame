@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b5fb0672bf44c4a9e9a29307405174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 862903451161297602, guid: 9e12aadd743423f4c88e7428c5c0786f, type: 3}
+  spawner: {fileID: 0}
   initialAsteroidCount: 10

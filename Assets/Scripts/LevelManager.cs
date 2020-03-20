@@ -41,7 +41,7 @@ namespace Asteroid
             _asteroidSpawned = initialAsteroidCount + _level;
             yield return new WaitForSeconds(2f);
 
-            spawner.Spawn(_asteroidSpawned);
+            spawner.Spawn(_level, _asteroidSpawned);
             _level++;
         }
 

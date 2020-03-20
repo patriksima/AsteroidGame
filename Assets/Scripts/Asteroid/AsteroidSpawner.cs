@@ -13,6 +13,8 @@ namespace Asteroid.Asteroid
 
         private Camera _camera;
 
+        private int _level;
+
         [MinMaxSlider(-300f, 300f)] [SerializeField]
         private MinMax angularVelocity = new MinMax(-100f, 100f);
 
@@ -46,8 +48,9 @@ namespace Asteroid.Asteroid
             _bounds.y = -bl.y;
         }
 
-        public void Spawn(int count)
+        public void Spawn(int level, int count)
         {
+            _level = level;
             StartCoroutine(CoSpawn(count));
         }
 
@@ -73,7 +76,7 @@ namespace Asteroid.Asteroid
             var end = Random.insideUnitCircle;
             var vec = (end - start).normalized;
 
-            rb.velocity = vec;
+            rb.velocity = vec * (1 + ((1 + _level) * .1f));
         }
 
         private void SetRotation(Rigidbody2D rb)

@@ -98,6 +98,7 @@
      <Compile Include="Assets\Scripts\Ship\ShipDeadEffect.cs" />
      <Compile Include="Assets\Scripts\Ship\ShipExplosionAudio.cs" />
      <Compile Include="Assets\Scripts\Ship\ShipHealth.cs" />
+     <Compile Include="Assets\Scripts\Ship\ShipLevelSize.cs" />
      <Compile Include="Assets\Scripts\Ship\WeaponAudio.cs" />
      <Compile Include="Assets\Scripts\Ship\WeaponController.cs" />
      <Compile Include="Assets\Scripts\Singleton.cs" />

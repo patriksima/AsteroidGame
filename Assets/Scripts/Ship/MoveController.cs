@@ -24,7 +24,7 @@ namespace Asteroid.Ship
             IsMoving = !(Mathf.Approximately(v, 0f) && Mathf.Approximately(h, 0f));
 
             // Linear rotation (slow at small pressure, faster at bigger pressure)
-            const float t = .4f;
+            const float t = .1f;
             const float a = RotationSpeed - 10f / (1f - t);
             const float b = RotationSpeed - a;
 
