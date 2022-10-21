@@ -40,11 +40,14 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: d015ca053fd974c44a9bd34e45a71a7a, type: 3}
-    totalSpriteSurfaceArea: 3856340
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: -8457723990739998261, guid: f7e6a2d0d317b654e9deb79339bce71f, type: 3}
@@ -148,5 +151,6 @@ SpriteAtlas:
   - asteroid_10_with_cracks_2
   - asteroid_10_with_cracks_0
   - asteroid_10_with_cracks_1
+  m_RenderDataMap: {}
   m_Tag: Asteroids
   m_IsVariant: 0

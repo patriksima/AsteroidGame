@@ -1212,7 +1212,7 @@ TextureImporter:
       213: -3598590266023668107
     second: asteroid_01_with_cracks_396
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -1232,6 +1232,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1241,8 +1243,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -1263,9 +1265,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1281,6 +1288,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1310,7 +1329,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 5c55435a0e9db6ab0800000000000000
-      internalID: -5013674201279343163
+      internalID: 9097014453191235531
       vertices: []
       indices: 
       edges: []
@@ -1331,7 +1350,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 6288f8206068ab4c0800000000000000
-      internalID: -4270953936236607450
+      internalID: 5267365428097030844
       vertices: []
       indices: 
       edges: []
@@ -1352,7 +1371,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: b84a402e29edc9210800000000000000
-      internalID: 1341191511488111755
+      internalID: 991944377331223647
       vertices: []
       indices: 
       edges: []
@@ -1373,7 +1392,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 6932fd55cb7d369d0800000000000000
-      internalID: -2782142940890324074
+      internalID: -7402301571462492641
       vertices: []
       indices: 
       edges: []
@@ -1394,7 +1413,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 6d0c6b92ec3550fa0800000000000000
-      internalID: -5835165597260398378
+      internalID: 9073312271601827497
       vertices: []
       indices: 
       edges: []
@@ -1415,7 +1434,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 4c4768f87ede0dc60800000000000000
-      internalID: 7841028530053215428
+      internalID: -8707792303924701058
       vertices: []
       indices: 
       edges: []
@@ -1430,6 +1449,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      asteroid_01_with_cracks_4: 9073312271601827497
+      asteroid_01_with_cracks_0: 9097014453191235531
+      asteroid_01_with_cracks_5: -8707792303924701058
+      asteroid_01_with_cracks_1: 5267365428097030844
+      asteroid_01_with_cracks_2: 991944377331223647
+      asteroid_01_with_cracks_3: -7402301571462492641
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

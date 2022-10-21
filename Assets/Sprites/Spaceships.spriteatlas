@@ -40,11 +40,14 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 7455155c94657d641b8833b312f35c0a, type: 3}
-    totalSpriteSurfaceArea: 12800
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 1ccd5402bb4913046ba2df88a45cdf33, type: 3}
@@ -52,5 +55,6 @@ SpriteAtlas:
   m_PackedSpriteNamesToIndex:
   - spaceship2
   - spaceship
+  m_RenderDataMap: {}
   m_Tag: Spaceships
   m_IsVariant: 0
